@@ -14,8 +14,9 @@
     "gulp": "3.9.0",
     "gulp-autoprefixer": "1.0.0",
     "gulp-imagemin": "^2.3.0",
-    "gulp-sass": "^0.7.3",
-    "gulp-scss-lint": "^0.2.2"
+    "gulp-sass": "^2.0.4",
+    "gulp-scss-lint": "^0.2.2",
+    "gulp-sourcemaps": "^1.5.2"
   },
   "repository": {
     "type": "git",

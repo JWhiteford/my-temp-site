@@ -1,10 +1,11 @@
-var gulp        = require('gulp');
-var browserSync = require('browser-sync');
-var sass        = require('gulp-sass');
-var prefix      = require('gulp-autoprefixer');
-var cp          = require('child_process');
-var imagemin    = require('gulp-imagemin');
-var pngquant    = require('imagemin-pngquant');
+var gulp          = require('gulp');
+var sourcemaps    = require('gulp-sourcemaps');
+var sass          = require('gulp-sass');
+var autoprefixer  = require('gulp-autoprefixer');
+var browserSync   = require('browser-sync');
+var cp            = require('child_process');
+var imagemin      = require('gulp-imagemin');
+var pngquant      = require('imagemin-pngquant');
 
 
 var messages = {
@@ -49,15 +50,32 @@ gulp.task('build', function (done) {
  */
 gulp.task('sass', function () {
   return gulp.src('_scss/style.scss')
+    .pipe(sourcemaps.init())
     .pipe(sass({
       includePaths: ['scss'],
       onError: browserSync.notify
     }))
-    .pipe(prefix(['last 15 versions', '> 1%', 'ie 9'], { cascade: true }))
+    .pipe(sourcemaps.write({includeContent: false}))
+    .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 9'], { cascade: true }))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('_site/css'))
     .pipe(browserSync.reload({stream:true}))
     .pipe(gulp.dest('css'));
 });
+
+
+
+
+/**
+ * Watch scss files for changes & recompile
+ * Watch html/md files, run jekyll & reload BrowserSync
+ */
+gulp.task('watch', function () {
+  gulp.watch('_scss/**/*.scss', ['sass']);
+  gulp.watch(['*.html', '*.md', '_layouts/*.html', '_pages/*.html', '_includes/*.html', '_posts/*'], ['jekyll-rebuild']);
+});
+
 
 /**
  * Wait for jekyll-build, then launch the Server
@@ -70,14 +88,6 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
   });
 });
 
-/**
- * Watch scss files for changes & recompile
- * Watch html/md files, run jekyll & reload BrowserSync
- */
-gulp.task('watch', function () {
-  gulp.watch('_scss/**/*.scss', ['sass']);
-  gulp.watch(['*.html', '*.md', '_layouts/*.html', '_pages/*.html', '_includes/*.html', '_posts/*'], ['jekyll-rebuild']);
-});
 
 /**
  * Default task, running just `gulp` will compile the sass,

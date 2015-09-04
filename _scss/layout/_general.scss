@@ -1,4 +1,7 @@
 // fix <main> from breaking in IE (use if html5shim isn't being added to site)
 main {
   display: block;
+
+  width: 90rem;
+  margin: 3rem auto;
 }

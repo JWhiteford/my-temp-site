@@ -1,0 +1,13 @@
+main {
+  display: block;
+  width: 90rem;
+  margin: 3rem auto; }
+
+#__bs_notify__ {
+  bottom: 0;
+  left: 0;
+  top: initial !important;
+  border-radius: 0 !important;
+  padding: initial !important; }
+
+/*# sourceMappingURL=style.css.map */
