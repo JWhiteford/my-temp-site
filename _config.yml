@@ -3,7 +3,7 @@ title: Stacks # title should be short, like the company name. It is added to the
 name: Stacks # name is for sharing meta data; it should be the name for the "overall site"
 description: Site description should be between 130-155 characters
 logo: /img/company-logo.png
-share_logo: /img/share-company-logo.png # image should be at 1200 x 630 for social sharing
+share_logo: /img/share-company-logo.png # Social media posting. FB (Size should be at min 600 x 315. Better size is 1200 x 630) Twitter (min size 280px x 150px)
 baseurl: # the subpath of your site, e.g. /blog/
 site_author: Stacks
 

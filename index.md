@@ -19,3 +19,10 @@ Consectetur adipisicing elit. Molestias animi numquam eos tempore iusto iure quo
 Consequuntur soluta provident, sit quibusdam facilis nesciunt quo mollitia dolores explicabo. Aspernatur cumque consequuntur, hic ea, delectus similique voluptas eos veritatis assumenda natus unde est sed iusto officiis earum.
 
 Itaque consequatur magnam aspernatur sint voluptatibus, voluptas deleniti quisquam harum excepturi natus aliquam tempore, dignissimos? Quibusdam incidunt deserunt, quod, repudiandae ipsa nesciunt.
+
+
+<ul class="posts">
+  {% for post in site.posts %}
+    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
