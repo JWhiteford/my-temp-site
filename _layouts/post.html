@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<div class="row articles">
+  <h2>{{ page.title }}</h2>
+  <p>{{ page.date | date_to_string }}</p>
+
+  <section class="post">
+    {{ content }}
+    <div class="author">
+      - {{ page.author }}
+    </div>
+  </section>
+</div>

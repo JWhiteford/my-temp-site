@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+
+  <!-- Google & Bing webmaster tools verification" -->
+  {% if site.google_verify %}<meta name="google-site-verification" content="{{ site.google_verify }}">{% endif %}
+  {% if site.bing_verify %}<meta name="msvalidate.01" content="{{ site.bing_verify }}">{% endif %}
+  <link rel="shortcut icon" href="{{ site.baseurl }}/img/favicon.ico">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
+  {% if page.url contains "/articles/" %}<link rel="stylesheet" href="{{ site.baseurl }}/css/blog.css">{% endif %}
+  <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}">
+
+  <!-- Google+ -->
+  <meta itemprop="name" content="{{ page.title }} | {{ site.title }}" />
+  <meta itemprop="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+  <meta itemprop="image" content="{% if page.shareimage %}{{ page.shareimage }}{% else %}{{ site.url }}{{ site.share_logo }}{% endif %}" />
+
+  <!-- twitter card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="{{ site.name }}" />
+  <meta name="twitter:creator" content="{% if page.author %}{{ page.author }}{% else %}{{ site.site_author }}{% endif %}" />
+  <meta name="twitter:title" content="{{ page.title }} | {{ site.title }}" />
+  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+  <meta name="twitter:image:src" content="{% if page.shareimage %}{{ page.shareimage }}{% else %}{{ site.url }}{{ site.share_logo }}{% endif %}" />
+  <meta name="Twitter:domain" content="{{ site.url }}" />
+
+  <!-- fb open graph -->
+  {% if page.url contains '/articles/' %}
+    <meta property="og:type" content="article" />
+  {% else %}
+    <meta property="og:type" content="website" />
+  {% endif %}
+  <meta property="og:title" content="{{ page.title }} | {{ site.title }}" />
+  <meta property="og:url" content="{{ site.url }}{{ page.url | replace:'index.html',''}}" />
+  <meta property="og:image" content="{% if page.shareimage != nil %}{{ page.shareimage }}{% else %}{{ site.url }}{{ site.share_logo }}{% endif %}" />
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+  <meta property="og:site_name" content="{{ site.name }}" />
+
+</head>
+
+<body {% if page.class != nil %} class="{{ page.class }}" {% endif %}>

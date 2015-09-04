@@ -1,0 +1,54 @@
+---
+title: Articles
+class: posts
+---
+
+<ul class="posts">
+  {% for post in paginator.posts %}
+    <li>
+      {% if post.offsite} %}
+        <a href="{{ post.offsite }}" target="_blank">
+      {% else %}
+        <a href="{{ site.baseurl }}{{ post.url }}">
+      {% endif %}
+        <div class="row">
+          <h1>{{ post.title }}</h1>
+          {% if post.author} %}
+            <p>{{ post.author }} | <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date_to_string }}</time></p>
+          {% else %}
+            <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date_to_string }}</time>
+          {% endif %}
+        </div>
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+
+
+<!-- Pagination links -->
+{% if paginator.total_pages > 1 %}
+  <div class="pagination-centered">
+    <ul class="pagination" role="menubar" aria-label="Pagination">
+      {% if paginator.previous_page %}
+        <li><a href="{{ site.baseurl }}{{ paginator.previous_page_path }}" class="previous">&laquo;</a></li>
+      {% else %}
+        <li class="arrow unavailable" aria-disabled="true">&laquo;</li>
+      {% endif %}
+      {% if paginator.page %}
+        <li class="current"><a href="">{{ paginator.page }}</a></li>
+      {% endif %}
+        <li class="page_number">Page: {{ paginator.page }} of {{ paginator.total_pages }}</li>
+      {% if paginator.next_page %}
+        <a href="{{ site.baseurl }}{{ paginator.next_page_path }}" class="arrow">&raquo;</a>
+      {% else %}
+        <li class="arrow unavailable" aria-disabled="true">&raquo;</li>
+      {% endif %}
+    </ul>
+  </div>
+
+  <!-- <h1>{{ paginator.posts }}</h1> -->
+
+{% endif %}
+{% comment %}
+  this is a test comment
+{% endcomment %}

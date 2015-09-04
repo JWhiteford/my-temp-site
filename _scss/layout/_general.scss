@@ -1,0 +1,4 @@
+// fix <main> from breaking in IE (use if html5shim isn't being added to site)
+main {
+  display: block;
+}

@@ -1,0 +1,8 @@
+{
+  "name": "hybrid-forge",
+  "version": "0.0.1",
+  "dependencies": {
+    "foundation": "~5.5.2",
+    "jquery": "2.1.4"
+  }
+}

@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<!-- saved from url=(0083)http://localhost:3000/articles/managing-android-build-variant-globals-using-gradle/ -->
+<html class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Managing Android-Build-Variant-Globals Using Gradle</title>
+  <meta name="viewport" content="width=device-width">
+  <link rel="shortcut icon" href="http://localhost:3000/articles/managing-android-build-variant-globals-using-gradle/img/favicon.ico">
+  <link rel="stylesheet" href="http://localhost:3000/css/main.css?rel=1438197908957">
+  <link rel="stylesheet" href="http://localhost:3000/css/animate.css">
+  <link rel="stylesheet" href="http://localhost:3000/css/tomorrow-night.css">
+  <script async="" src="./Managing Android-Build-Variant-Globals Using Gradle_files/analytics.js"></script><script src="./Managing Android-Build-Variant-Globals Using Gradle_files/modernizr.js"></script>
+  <script src="./Managing Android-Build-Variant-Globals Using Gradle_files/jquery.min.js"></script>
+  <script src="./Managing Android-Build-Variant-Globals Using Gradle_files/fastclick.js"></script>
+  <script src="./Managing Android-Build-Variant-Globals Using Gradle_files/jquery.validate.min.js"></script>
+  <script src="./Managing Android-Build-Variant-Globals Using Gradle_files/additional-methods.min.js"></script>
+<meta class="foundation-data-attribute-namespace"><meta class="foundation-mq-xxlarge"><meta class="foundation-mq-xlarge-only"><meta class="foundation-mq-xlarge"><meta class="foundation-mq-large-only"><meta class="foundation-mq-large"><meta class="foundation-mq-medium-only"><meta class="foundation-mq-medium"><meta class="foundation-mq-small-only"><meta class="foundation-mq-small"><style></style><meta class="foundation-mq-topbar"><script type="text/javascript" src="chrome-extension://aadgmnobpdmgmigaicncghmmoeflnamj/ng-inspector.js"></script></head>
+
+<body class="article"><script type="text/javascript" id="__bs_script__">//<![CDATA[
+    document.write("<script async src='/browser-sync/browser-sync-client.1.9.2.js'><\/script>".replace(/HOST/g, location.hostname).replace(/PORT/g, location.port));
+//]]></script><script async="" src="./Managing Android-Build-Variant-Globals Using Gradle_files/browser-sync-client.1.9.2.js"></script>
+
+<div class="header sticky" style="" data-magellan-expedition-clone="">
+  <h1 class="logo">
+    <a href="http://localhost:3000/"><img src="./Managing Android-Build-Variant-Globals Using Gradle_files/hybrid-forge-logo.png" title="Hybrid Forge">Hybrid Forge</a>
+  </h1>
+  <nav class="main-nav show-for-large-up">
+    <ul>
+      
+        
+        
+        
+          <li>
+            
+              <a href="http://localhost:3000/approach/">Approach</a>
+            
+          </li>
+        
+      
+        
+        
+        
+          <li>
+            
+              <a href="http://localhost:3000/services/">Services</a>
+            
+          </li>
+        
+      
+        
+        
+        
+          <li>
+            
+              <a href="http://localhost:3000/work/">Work</a>
+            
+          </li>
+        
+      
+        
+        
+        
+          <li>
+            
+              <a href="http://localhost:3000/clients/">Clients</a>
+            
+          </li>
+        
+      
+        
+        
+        
+          <li>
+            
+              <a href="http://localhost:3000/people/">People</a>
+            
+          </li>
+        
+      
+        
+        
+        
+          <li>
+            
+              <a href="http://localhost:3000/careers/">Careers</a>
+            
+          </li>
+        
+      
+        
+        
+        
+          <li>
+            
+              <a href="http://localhost:3000/articles/">Articles</a>
+            
+          </li>
+        
+      
+        
+        
+        
+          <li>
+            
+              <a href="http://localhost:3000/contact/">Contact</a>
+            
+          </li>
+        
+      
+        
+        
+        
+          <li>
+             
+              <a href="https://hybridforge.freshdesk.com/support/home" target="_blank">Support</a>
+            
+          </li>
+        
+      
+    </ul>
+  </nav>
+  <a href="http://localhost:3000/articles/managing-android-build-variant-globals-using-gradle/#" class="menu-icon hide-for-large-up">
+    <span></span>
+    <span></span>
+    <span></span>
+    Menu
+  </a>
+</div><div class="header sticky fixed" data-magellan-expedition="fixed" style="position: fixed; top: 0px;">
+  <h1 class="logo">
+    <a href="http://localhost:3000/"><img src="./Managing Android-Build-Variant-Globals Using Gradle_files/hybrid-forge-logo.png" title="Hybrid Forge">Hybrid Forge</a>
+  </h1>
+  <nav class="main-nav show-for-large-up">
+    <ul>
+      
+        
+        
+        
+          <li>
+            
+              <a href="http://localhost:3000/approach/">Approach</a>
+            
+          </li>
+        
+      
+        
+        
+        
+          <li>
+            
+              <a href="http://localhost:3000/services/">Services</a>
+            
+          </li>
+        
+      
+        
+        
+        
+          <li>
+            
+              <a href="http://localhost:3000/work/">Work</a>
+            
+          </li>
+        
+      
+        
+        
+        
+          <li>
+            
+              <a href="http://localhost:3000/clients/">Clients</a>
+            
+          </li>
+        
+      
+        
+        
+        
+          <li>
+            
+              <a href="http://localhost:3000/people/">People</a>
+            
+          </li>
+        
+      
+        
+        
+        
+          <li>
+            
+              <a href="http://localhost:3000/careers/">Careers</a>
+            
+          </li>
+        
+      
+        
+        
+        
+          <li>
+            
+              <a href="http://localhost:3000/articles/">Articles</a>
+            
+          </li>
+        
+      
+        
+        
+        
+          <li>
+            
+              <a href="http://localhost:3000/contact/">Contact</a>
+            
+          </li>
+        
+      
+        
+        
+        
+          <li>
+             
+              <a href="https://hybridforge.freshdesk.com/support/home" target="_blank">Support</a>
+            
+          </li>
+        
+      
+    </ul>
+  </nav>
+  <a href="http://localhost:3000/articles/managing-android-build-variant-globals-using-gradle/#" class="menu-icon hide-for-large-up">
+    <span></span>
+    <span></span>
+    <span></span>
+    Menu
+  </a>
+</div>
+	<section class="main">
+		
+  	<div class="row">
+  		<div class="large-8 columns large-centered">
+  			<div class="row articles">
+
+  <h2>Managing Android-Build-Variant-Globals Using Gradle</h2>
+  <p class="meta">25 Mar 2015</p>
+
+  <div class="post">
+    <p>On enterprise projects, you are often required to build variants of your app such that each is configured to run against a particular test environment.</p>
+
+<p>Executing these configurations into a build would typically involve one or more of the following:</p>
+
+<ul>
+  <li>a text file containing key-value pairs that dictate how the product will be compiled (i.e. the configuration file);</li>
+  <li>writing some sort of wrapper object that will parse and load the values in the configuration file;</li>
+  <li>adding some preprocessor directive, particularly when programming with C-based languages; OR</li>
+  <li>implementing some code paths dependent to the settings in the configuration file (which is likely in Java as it does not support preprocessor directives)</li>
+  <li>Debugging could be easily frustrating. Dealing with custom logic related to build variants into your debugging exercise will complicate things really REALLY fast.</li>
+</ul>
+
+<p>It would be a lot easier if:</p>
+
+<ul>
+  <li>configuration files are located in one place; and</li>
+  <li>build configuration logic is decoupled from the main codeline.</li>
+</ul>
+
+<p>Enter Gradle.</p>
+
+<h3 id="what-is-gradle">What is Gradle?</h3>
+
+<p>“Gradle is an advanced build toolkit that manages dependencies and allows you to define custom build logic.”</p>
+
+<p>As a mobile developer, Gradle is that thing that allows me to easily manage our Android build configurations and build variants.</p>
+
+<p>It’s also that thing that I found out recently that allows me to easily customize globals across the different variants without needing any sort of wrapper-code for configuration files (booyea!).</p>
+
+<p>How then do I implement a global variable and set it across variants? Please read on.</p>
+
+<h3 id="build-variants">Build Variants</h3>
+
+<p>Let’s first define a build variant. As stated before, you may need to build different versions of the same app so that you can run tests against different server environments. Let’s consider the URL of the server environment as our <strong>global</strong>.</p>
+
+<p>You may be required to make a staging, test and production versions of the app. Let these be the <strong>product flavours</strong>.</p>
+
+<p>You also might need to test signed and unsigned versions of these different flavors: debug and release. These are our <strong>build types</strong>.</p>
+
+<p>The combination of the product flavor and the build type then yields a build variant. In my example above, the different variants are:</p>
+
+<ul>
+  <li>stagingDebug</li>
+  <li>stagingRelease</li>
+  <li>testDebug</li>
+  <li>testRelease</li>
+  <li>productionDebug</li>
+  <li>productionRelease</li>
+</ul>
+
+<p>To create these variants, one simply needs to define the build types and product flavors in the main application module’s build.gradle file like so:</p>
+
+<div class="highlight"><pre><code class="language-java hljs" data-lang="java"><span class="lineno"> <span class="hljs-number">1</span></span> <span class="n">apply</span> <span class="nl">plugin:</span> <span class="err"><span class="hljs-string">'</span></span><span class="n"><span class="hljs-string">com</span></span><span class="o"><span class="hljs-string">.</span></span><span class="na"><span class="hljs-string">android</span></span><span class="o"><span class="hljs-string">.</span></span><span class="na"><span class="hljs-string">application</span></span><span class="err"><span class="hljs-string">'</span></span>
+<span class="lineno"> <span class="hljs-number">2</span></span> 
+<span class="lineno"> <span class="hljs-number">3</span></span> <span class="n">android</span> <span class="o">{</span>
+<span class="lineno"> <span class="hljs-number">4</span></span>   <span class="n">compileSdkVersion</span> <span class="mi"><span class="hljs-number">21</span></span>
+<span class="lineno"> <span class="hljs-number">5</span></span>   <span class="n">buildToolsVersion</span> <span class="s"><span class="hljs-string">"21.1.2"</span></span>
+<span class="lineno"> <span class="hljs-number">6</span></span> 
+<span class="lineno"> <span class="hljs-number">7</span></span>   <span class="n">defaultConfig</span> <span class="o">{</span>
+<span class="lineno"> <span class="hljs-number">8</span></span>     <span class="n">applicationId</span> <span class="s"><span class="hljs-string">"my.application.id"</span></span>
+<span class="lineno"> <span class="hljs-number">9</span></span>     <span class="n">minSdkVersion</span> <span class="mi"><span class="hljs-number">16</span></span>
+<span class="lineno"><span class="hljs-number">10</span></span>     <span class="n">targetSdkVersion</span> <span class="mi"><span class="hljs-number">21</span></span>
+<span class="lineno"><span class="hljs-number">11</span></span>   <span class="o">}</span>
+<span class="lineno"><span class="hljs-number">12</span></span> 
+<span class="lineno"><span class="hljs-number">13</span></span>   <span class="n">buildTypes</span> <span class="o">{</span>
+<span class="lineno"><span class="hljs-number">14</span></span>     <span class="n">release</span> <span class="o">{</span>
+<span class="lineno"><span class="hljs-number">15</span></span>       <span class="n">minifyEnabled</span> <span class="kc"><span class="hljs-keyword">true</span></span>
+<span class="lineno"><span class="hljs-number">16</span></span>       <span class="n">shrinkResources</span> <span class="kc"><span class="hljs-keyword">true</span></span>
+<span class="lineno"><span class="hljs-number">17</span></span>       <span class="n"><span class="hljs-function">proguardFiles</span></span><span class="hljs-function"> </span><span class="nf"><span class="hljs-function"><span class="hljs-title">getDefaultProguardFile</span></span></span><span class="o"><span class="hljs-function"><span class="hljs-params">(</span></span></span><span class="err"><span class="hljs-function"><span class="hljs-params"><span class="hljs-string">'</span></span></span></span><span class="n"><span class="hljs-function"><span class="hljs-params"><span class="hljs-string">proguard</span></span></span></span><span class="o"><span class="hljs-function"><span class="hljs-params"><span class="hljs-string">-</span></span></span></span><span class="n"><span class="hljs-function"><span class="hljs-params"><span class="hljs-string">android</span></span></span></span><span class="o"><span class="hljs-function"><span class="hljs-params"><span class="hljs-string">.</span></span></span></span><span class="na"><span class="hljs-function"><span class="hljs-params"><span class="hljs-string">txt</span></span></span></span><span class="err"><span class="hljs-function"><span class="hljs-params"><span class="hljs-string">'</span></span></span></span><span class="o"><span class="hljs-function"><span class="hljs-params">)</span>,</span></span><span class="hljs-function"> </span><span class="err"><span class="hljs-function">'</span></span><span class="n"><span class="hljs-function">proguard</span></span><span class="o"><span class="hljs-function">-</span></span><span class="n"><span class="hljs-function">rules</span></span><span class="o"><span class="hljs-function">.</span></span><span class="na"><span class="hljs-function">txt</span></span><span class="err"><span class="hljs-function">'</span></span><span class="hljs-function">
+</span><span class="lineno"><span class="hljs-function">18</span></span><span class="hljs-function">     </span><span class="o"><span class="hljs-function">}</span></span><span class="hljs-function">
+</span><span class="lineno"><span class="hljs-function">19</span></span><span class="hljs-function">   </span><span class="o"><span class="hljs-function">}</span></span><span class="hljs-function">
+</span><span class="lineno"><span class="hljs-function">20</span></span><span class="hljs-function"> 
+</span><span class="lineno"><span class="hljs-function">21</span></span><span class="hljs-function">   </span><span class="n"><span class="hljs-function">productFlavors</span></span><span class="hljs-function"> </span><span class="o">{</span>
+<span class="lineno"><span class="hljs-number">22</span></span> 	  <span class="n">staging</span> <span class="o">{</span>
+<span class="lineno"><span class="hljs-number">23</span></span> 	    <span class="n">applicationIdSuffix</span> <span class="s"><span class="hljs-string">".staging"</span></span>
+<span class="lineno"><span class="hljs-number">24</span></span> 	  <span class="o">}</span>
+<span class="lineno"><span class="hljs-number">25</span></span> 	  <span class="n">test</span> <span class="o">{</span>
+<span class="lineno"><span class="hljs-number">26</span></span> 	    <span class="n">applicationIdSuffix</span> <span class="s"><span class="hljs-string">".test"</span></span>
+<span class="lineno"><span class="hljs-number">27</span></span> 	  <span class="o">}</span>
+<span class="lineno"><span class="hljs-number">28</span></span> 	  <span class="n">production</span> <span class="o">{</span>
+<span class="lineno"><span class="hljs-number">29</span></span> 	    <span class="n">applicationIdSuffix</span> <span class="s"><span class="hljs-string">".production"</span></span>
+<span class="lineno"><span class="hljs-number">30</span></span> 	  <span class="o">}</span>
+<span class="lineno"><span class="hljs-number">31</span></span> <span class="o">}</span></code></pre></div>
+
+<p>Notice that under <strong>buildType</strong>, we did not define <strong>debug</strong> because it is one of the default build types. Release is also a default build type. However, we have it declared above since we want to  Gradle to build the release variants with proguard on as well as to shrink the final product’s size as much as possible.</p>
+
+<p>Inside each product flavor above, we find the <strong>applicationIdSuffix</strong>. This tells Gradle to append the suffix to the declared <strong>applicationId</strong> under <strong>defaultConfig</strong>. Having different IDs between the 3 product flavors then allows me to install all in the same device/emulator.</p>
+
+<h3 id="setting-up-the-globals">Setting up the globals</h3>
+
+<p>Now that we have defined the product flavors and build types in the build.gradle file, we can now define our globals.</p>
+
+<p>Let’s call the global that defines the server environment <strong>ENV</strong>.</p>
+
+<p>Let’s also add a boolean global that dictates whether we show or hide an annotation in one of our views (to indicate to the user if they have text field that says STAGING, TEST or hidden for production builds). Let’s call this <strong>SHOW_VARIANT</strong>.</p>
+
+<p>This is how I would define this in the build.gradle file.</p>
+
+<div class="highlight"><pre><code class="language-java hljs" data-lang="java"><span class="lineno"> <span class="hljs-number">1</span></span> <span class="n">apply</span> <span class="nl">plugin:</span> <span class="err"><span class="hljs-string">'</span></span><span class="n"><span class="hljs-string">com</span></span><span class="o"><span class="hljs-string">.</span></span><span class="na"><span class="hljs-string">android</span></span><span class="o"><span class="hljs-string">.</span></span><span class="na"><span class="hljs-string">application</span></span><span class="err"><span class="hljs-string">'</span></span>
+<span class="lineno"> <span class="hljs-number">2</span></span> 
+<span class="lineno"> <span class="hljs-number">3</span></span> <span class="n">android</span> <span class="o">{</span>
+<span class="lineno"> <span class="hljs-number">4</span></span>   <span class="n">compileSdkVersion</span> <span class="mi"><span class="hljs-number">21</span></span>
+<span class="lineno"> <span class="hljs-number">5</span></span>   <span class="n">buildToolsVersion</span> <span class="s"><span class="hljs-string">"21.1.2"</span></span>
+<span class="lineno"> <span class="hljs-number">6</span></span> 
+<span class="lineno"> <span class="hljs-number">7</span></span>   <span class="n">defaultConfig</span> <span class="o">{</span>
+<span class="lineno"> <span class="hljs-number">8</span></span>     <span class="n">applicationId</span> <span class="s"><span class="hljs-string">"my.application.id"</span></span>
+<span class="lineno"> <span class="hljs-number">9</span></span>     <span class="n">minSdkVersion</span> <span class="mi"><span class="hljs-number">16</span></span>
+<span class="lineno"><span class="hljs-number">10</span></span>     <span class="n">targetSdkVersion</span> <span class="mi"><span class="hljs-number">21</span></span>
+<span class="lineno"><span class="hljs-number">11</span></span>     <span class="n">buildConfigField</span><span class="o">(</span><span class="s"><span class="hljs-string">"boolean"</span></span><span class="o">,</span> <span class="s"><span class="hljs-string">"SHOW_VARIANT"</span></span><span class="o">,</span> <span class="s"><span class="hljs-string">"false"</span></span><span class="o">)</span>
+<span class="lineno"><span class="hljs-number">12</span></span>     <span class="n">buildConfigField</span><span class="o">(</span><span class="s"><span class="hljs-string">"String"</span></span><span class="o">,</span> <span class="s"><span class="hljs-string">"ENV"</span></span><span class="o">,</span> <span class="s"><span class="hljs-string">"http://environment.com"</span></span><span class="o">)</span>
+<span class="lineno"><span class="hljs-number">13</span></span>   <span class="o">}</span>
+<span class="lineno"><span class="hljs-number">14</span></span> 
+<span class="lineno"><span class="hljs-number">15</span></span>   <span class="n">buildTypes</span> <span class="o">{</span>
+<span class="lineno"><span class="hljs-number">16</span></span>     <span class="n">release</span> <span class="o">{</span>
+<span class="lineno"><span class="hljs-number">17</span></span>       <span class="n">minifyEnabled</span> <span class="kc"><span class="hljs-keyword">true</span></span>
+<span class="lineno"><span class="hljs-number">18</span></span>       <span class="n">shrinkResources</span> <span class="kc"><span class="hljs-keyword">true</span></span>
+<span class="lineno"><span class="hljs-number">19</span></span>       <span class="n"><span class="hljs-function">proguardFiles</span></span><span class="hljs-function"> </span><span class="nf"><span class="hljs-function"><span class="hljs-title">getDefaultProguardFile</span></span></span><span class="o"><span class="hljs-function"><span class="hljs-params">(</span></span></span><span class="err"><span class="hljs-function"><span class="hljs-params"><span class="hljs-string">'</span></span></span></span><span class="n"><span class="hljs-function"><span class="hljs-params"><span class="hljs-string">proguard</span></span></span></span><span class="o"><span class="hljs-function"><span class="hljs-params"><span class="hljs-string">-</span></span></span></span><span class="n"><span class="hljs-function"><span class="hljs-params"><span class="hljs-string">android</span></span></span></span><span class="o"><span class="hljs-function"><span class="hljs-params"><span class="hljs-string">.</span></span></span></span><span class="na"><span class="hljs-function"><span class="hljs-params"><span class="hljs-string">txt</span></span></span></span><span class="err"><span class="hljs-function"><span class="hljs-params"><span class="hljs-string">'</span></span></span></span><span class="o"><span class="hljs-function"><span class="hljs-params">)</span>,</span></span><span class="hljs-function"> </span><span class="err"><span class="hljs-function">'</span></span><span class="n"><span class="hljs-function">proguard</span></span><span class="o"><span class="hljs-function">-</span></span><span class="n"><span class="hljs-function">rules</span></span><span class="o"><span class="hljs-function">.</span></span><span class="na"><span class="hljs-function">txt</span></span><span class="err"><span class="hljs-function">'</span></span><span class="hljs-function">
+</span><span class="lineno"><span class="hljs-function">20</span></span><span class="hljs-function">     </span><span class="o"><span class="hljs-function">}</span></span><span class="hljs-function">
+</span><span class="lineno"><span class="hljs-function">21</span></span><span class="hljs-function">   </span><span class="o"><span class="hljs-function">}</span></span><span class="hljs-function">
+</span><span class="lineno"><span class="hljs-function">22</span></span><span class="hljs-function"> 
+</span><span class="lineno"><span class="hljs-function">23</span></span><span class="hljs-function">   </span><span class="n"><span class="hljs-function">productFlavors</span></span><span class="hljs-function"> </span><span class="o">{</span>
+<span class="lineno"><span class="hljs-number">24</span></span>     <span class="n">staging</span> <span class="o">{</span>
+<span class="lineno"><span class="hljs-number">25</span></span>       <span class="n">applicationIdSuffix</span> <span class="s"><span class="hljs-string">".staging"</span></span>
+<span class="lineno"><span class="hljs-number">26</span></span>       <span class="n">buildConfigField</span><span class="o">(</span><span class="s"><span class="hljs-string">"boolean"</span></span><span class="o">,</span> <span class="s"><span class="hljs-string">"SHOW_VARIANT"</span></span><span class="o">,</span> <span class="s"><span class="hljs-string">"true"</span></span><span class="o">)</span>
+<span class="lineno"><span class="hljs-number">27</span></span>       <span class="n">buildConfigField</span><span class="o">(</span><span class="s"><span class="hljs-string">"String"</span></span><span class="o">,</span> <span class="s"><span class="hljs-string">"ENV"</span></span><span class="o">,</span> <span class="s"><span class="hljs-string">"http://staging.environment.com"</span></span><span class="o">)</span>
+<span class="lineno"><span class="hljs-number">28</span></span>     <span class="o">}</span>
+<span class="lineno"><span class="hljs-number">29</span></span>     <span class="n">test</span> <span class="o">{</span>
+<span class="lineno"><span class="hljs-number">30</span></span>       <span class="n">applicationIdSuffix</span> <span class="s"><span class="hljs-string">".test"</span></span>
+<span class="lineno"><span class="hljs-number">31</span></span>       <span class="n">buildConfigField</span><span class="o">(</span><span class="s"><span class="hljs-string">"boolean"</span></span><span class="o">,</span> <span class="s"><span class="hljs-string">"SHOW_VARIANT"</span></span><span class="o">,</span> <span class="s"><span class="hljs-string">"true"</span></span><span class="o">)</span>
+<span class="lineno"><span class="hljs-number">32</span></span>       <span class="n">buildConfigField</span><span class="o">(</span><span class="s"><span class="hljs-string">"String"</span></span><span class="o">,</span> <span class="s"><span class="hljs-string">"ENV"</span></span><span class="o">,</span> <span class="s"><span class="hljs-string">"http://test.environment.com"</span></span><span class="o">)</span>
+<span class="lineno"><span class="hljs-number">33</span></span>     <span class="o">}</span>
+<span class="lineno"><span class="hljs-number">34</span></span>     <span class="n">production</span> <span class="o">{</span>
+<span class="lineno"><span class="hljs-number">35</span></span>       <span class="n">applicationIdSuffix</span> <span class="s"><span class="hljs-string">".production"</span></span>
+<span class="lineno"><span class="hljs-number">36</span></span>     <span class="o">}</span>
+<span class="lineno"><span class="hljs-number">37</span></span>   <span class="o">}</span>
+<span class="lineno"><span class="hljs-number">38</span></span> <span class="o">}</span></code></pre></div>
+
+<p>Note how we defined the fields in defaultConfig instead of declaring it inside the production-product flavor.  Doing it this way ensures we always have default regardless of the build variant.</p>
+
+<h3 id="how-do-we-use-these-globals-in-the-code">How do we use these globals in the code?</h3>
+
+<p>You simply reference the BuildConfig class and use dot notation to access the fields you have defined. See the usage examples below:</p>
+
+<div class="highlight"><pre><code class="language-java hljs" data-lang="java"><span class="lineno"> <span class="hljs-number">1</span></span> <span class="kd"><span class="hljs-function"><span class="hljs-keyword">public</span></span></span><span class="hljs-function"> </span><span class="kt"><span class="hljs-function"><span class="hljs-keyword">void</span></span></span><span class="hljs-function"> </span><span class="nf"><span class="hljs-function"><span class="hljs-title">getRequest</span></span></span><span class="o"><span class="hljs-function"><span class="hljs-params">(</span></span></span><span class="n"><span class="hljs-function"><span class="hljs-params">String</span></span></span><span class="hljs-function"><span class="hljs-params"> </span></span><span class="n"><span class="hljs-function"><span class="hljs-params">url</span></span></span><span class="o"><span class="hljs-function"><span class="hljs-params">)</span></span></span><span class="hljs-function"> </span><span class="o">{</span>
+<span class="lineno"> <span class="hljs-number">2</span></span>   <span class="n">HttpClient</span> <span class="n">httpClient</span> <span class="o">=</span> <span class="n">getHttpClient</span><span class="o">();</span>
+<span class="lineno"> <span class="hljs-number">3</span></span>   <span class="k"><span class="hljs-keyword">try</span></span> <span class="o">{</span>
+<span class="lineno"> <span class="hljs-number">4</span></span>     <span class="c1"><span class="hljs-comment">// Create a GET request</span></span>
+<span class="lineno"> <span class="hljs-number">5</span></span>     <span class="n">HttpGet</span> <span class="n">httpGet</span> <span class="o">=</span> <span class="k"><span class="hljs-keyword">new</span></span> <span class="nf">HttpGet</span><span class="o">(</span><span class="n">BuildConfig</span><span class="o">.</span><span class="na">ENV</span><span class="o">);</span>
+<span class="lineno"> <span class="hljs-number">6</span></span> 
+<span class="lineno"> <span class="hljs-number">7</span></span>     <span class="o">...</span> <span class="n">some</span> <span class="n">code</span> <span class="o">...</span>
+<span class="lineno"> <span class="hljs-number">8</span></span> 
+<span class="lineno"> <span class="hljs-number">9</span></span>   <span class="o">}</span> <span class="k"><span class="hljs-keyword">catch</span></span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+<span class="lineno"><span class="hljs-number">10</span></span> 
+<span class="lineno"><span class="hljs-number">11</span></span>     <span class="o">...</span> <span class="n">some</span> <span class="n">code</span> <span class="o">...</span>
+<span class="lineno"><span class="hljs-number">12</span></span> 
+<span class="lineno"><span class="hljs-number">13</span></span>   <span class="o">}</span>
+<span class="lineno"><span class="hljs-number">14</span></span> <span class="o">}</span>
+<span class="lineno"><span class="hljs-number">15</span></span> <span class="kd"><span class="hljs-function"><span class="hljs-keyword">public</span></span></span><span class="hljs-function"> </span><span class="kt"><span class="hljs-function"><span class="hljs-keyword">void</span></span></span><span class="hljs-function"> </span><span class="nf"><span class="hljs-function"><span class="hljs-title">showHideAnnotation</span></span></span><span class="o"><span class="hljs-function"><span class="hljs-params">()</span></span></span><span class="hljs-function">
+</span><span class="lineno"><span class="hljs-function">16</span></span><span class="hljs-function">   </span><span class="k"><span class="hljs-function"><span class="hljs-title">if</span></span></span><span class="hljs-function"> </span><span class="o"><span class="hljs-function"><span class="hljs-params">(</span></span></span><span class="n"><span class="hljs-function"><span class="hljs-params">BuildConfig</span></span></span><span class="o"><span class="hljs-function"><span class="hljs-params">.</span></span></span><span class="na"><span class="hljs-function"><span class="hljs-params">SHOW_VARIANT</span></span></span><span class="o"><span class="hljs-function"><span class="hljs-params">)</span></span></span><span class="hljs-function"> </span><span class="o">{</span>
+<span class="lineno"><span class="hljs-number">17</span></span>     <span class="n">mAnnotationText</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">VISIBLE</span><span class="o">);</span>
+<span class="lineno"><span class="hljs-number">18</span></span>   <span class="o">}</span> <span class="k"><span class="hljs-keyword">else</span></span> <span class="o">{</span>
+<span class="lineno"><span class="hljs-number">19</span></span>     <span class="n">mAnnotationText</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">GONE</span><span class="o">);</span>
+<span class="lineno"><span class="hljs-number">20</span></span>   <span class="o">}</span>
+<span class="lineno"><span class="hljs-number">21</span></span> <span class="o">}</span></code></pre></div>
+
+<h3 id="gradle--live-it-love-it-learn-it">Gradle:  Live It, Love It, Learn It</h3>
+
+<p>As you can see, Gradle is a very powerful once you learn it.</p>
+
+<p>All that wrapper code you have for configuration files – GONE!</p>
+
+<p>Rummaging through multiple configuration files to figure out your build settings – NO NEED – everything is in the build.gradle file.</p>
+
+<p>William of Ockham once said, “Keep things simple.” Gradle is certainly an Occam’s razor in Android development.</p>
+
+
+  </div>
+
+  <div class="author">
+    - JD Benito
+  </div>
+
+</div>
+	  	</div>
+    </div>
+  	
+  </section>
+  <footer>
+
+  <section class="section--slogan">
+    <ul>
+      <li>Innovate.</li>
+      <li>Design.</li>
+      <li>Build.</li>
+    </ul>
+  </section>
+
+  <section class="section--offices">
+    <div class="row">
+      <div class="columns small-12 medium-12 large-3 offices">
+        <h2>Offices</h2>
+          <p>
+              <a href="http://www.linkedin.com/company/hybrid-forge/">
+                  <img src="./Managing Android-Build-Variant-Globals Using Gradle_files/linkedin.png" alt="linkedin Logo" class="social">
+              </a>
+              <a href="http://www.facebook.com/hybridforge">
+                  <img src="./Managing Android-Build-Variant-Globals Using Gradle_files/fb.png" alt="facebook Logo" class="social">
+              </a>
+              <a href="http://twitter.com/hybridforge">
+                <img src="./Managing Android-Build-Variant-Globals Using Gradle_files/twitter.png" alt="twitter Logo" class="social">
+              </a>
+              <a href="https://plus.google.com/+HybridForge/">
+                <img src="./Managing Android-Build-Variant-Globals Using Gradle_files/gplus.png" alt="Google+ Logo" class="social">
+              </a>
+          </p>
+      </div>
+      <div class="columns small-12 medium-6 large-4 text-center">
+        <address itemscope="" itemtype="http://schema.org/LocalBusiness">
+          <span itemprop="name" class="print-only">Hybrid Forge</span>
+          <h5><strong>Calgary</strong></h5>
+          <span itemprop="telephone"><a href="tel:587-887-1520">587-887-1520</a></span>
+
+          <div itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+            <p>
+              Suite #1030
+              <span itemprop="streetAddress">396 11 Ave SW</span>
+
+              <span itemprop="addressLocality">Calgary</span>,
+              <span itemprop="addressRegion">Alberta</span>
+              <span itemprop="postalCode">T2R 0C5</span>
+            </p>
+          </div>
+          <p><strong>Toll Free</strong>
+            <br>
+            <span itemprop="telephone"><a href="tel:18776636743">1-877-66FORGE (36743)</a></span>
+          </p>
+        </address>
+      </div>
+      <div class="columns small-12 medium-6 large-4 text-center">
+        <address itemscope="" itemtype="http://schema.org/LocalBusiness">
+          <span itemprop="name" class="print-only">Hybrid Forge</span>
+          <h5><strong>Edmonton</strong></h5>
+          <span itemprop="telephone"><a href="tel:780-634-2979">780-634-2979</a></span>
+          <div itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+            <p>
+              Suite #302
+              <span itemprop="streetAddress">10509-81 Ave</span>
+              <span itemprop="addressLocality">Edmonton</span>,
+              <span itemprop="addressRegion">Alberta</span>
+              <span itemprop="postalCode">T6E 1X7</span>
+            </p>
+          </div>
+          <p><strong>Email</strong>
+            <br><a href="mailto:info@hybridforge.com">info@hybridforge.com</a>
+          </p>
+        </address>
+      </div>
+    </div>
+  </section>
+
+  <section class="section--partners">
+    <div class="row">
+      <div class="columns medium-12 large-2"><h2>Partners</h2></div>
+      <div class="columns medium-12 large-10">
+        <img src="./Managing Android-Build-Variant-Globals Using Gradle_files/microsoft.png" alt="Microsoft Partner Logo">
+        <img src="./Managing Android-Build-Variant-Globals Using Gradle_files/telus.png" alt="Telus Partner Logo">
+        <img src="./Managing Android-Build-Variant-Globals Using Gradle_files/drupal.png" alt="Drupal Partner Logo">
+        <img src="./Managing Android-Build-Variant-Globals Using Gradle_files/acquia.png" alt="Acquia Partner Logo">
+        <img src="./Managing Android-Build-Variant-Globals Using Gradle_files/adobe.png" alt="Adobe Partner Logo">
+      </div>
+    </div>
+    
+  </section>
+
+</footer>
+  <script src="./Managing Android-Build-Variant-Globals Using Gradle_files/foundation.min.js"></script>
+  <script src="./Managing Android-Build-Variant-Globals Using Gradle_files/highlight.min.js"></script>
+  <script src="./Managing Android-Build-Variant-Globals Using Gradle_files/app.js"></script>
+  <script>
+    $(document).foundation();
+    hljs.configure({
+      style: "monokai_sublime"
+    })
+    hljs.initHighlightingOnLoad();
+  </script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-11423352-2', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+
+<div id="__bs_notify__" style="display: none; padding: 15px; font-family: sans-serif; position: fixed; font-size: 0.9em; z-index: 9999; right: 0px; top: 0px; border-bottom-left-radius: 5px; margin: 0px; color: white; text-align: center; background-color: rgb(27, 32, 50);">Injected: main.css</div><div id="window-resizer-tooltip" style="display: none;"><a href="http://localhost:3000/articles/managing-android-build-variant-globals-using-gradle/#" title="Edit settings"></a><span class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth">1680</span> x <span class="tooltipHeight" id="winHeight">1023</span><br><span class="tooltipTitle">Viewport size: </span><span class="tooltipWidth" id="vpWidth">909</span> x <span class="tooltipHeight" id="vpHeight">884</span></div><div style="display: block;"></div></body><div></div></html>
