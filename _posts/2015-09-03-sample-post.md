@@ -21,3 +21,5 @@ Dolorum eaque mollitia facere sapiente enim vel. Lorem ipsum dolor sit amet, con
 - Facilis totam porro sed
 - Laborum expedita, quasi ab voluptates
 - Similique autem, dolore? Expedita, odio.
+
+[link to home page](/)
