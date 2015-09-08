@@ -3,7 +3,7 @@
   {% include nav-data.html %}
 {% endcomment %}
 
-  <main class="main">
+  <main class="main{% if page.url == "/index.html" %} row collapse{% endif %}">
     {{ content }}
   </main>
 

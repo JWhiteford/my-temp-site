@@ -5,7 +5,7 @@
 
 // FOUNDATION & NORMALIZE
 @import "settings"; // settings file from foundation
-//@import "vendors/foundation";
+@import "vendors/foundation";
 
 // UTILITIES
 @import "utilities/custom-mixins";
@@ -14,6 +14,7 @@
 @import "base/typography";
 
 // LAYOUTS
+@import "layout/full-height";
 @import "layout/general";
 // @import "layout/header";
 // @import "layout/footer";
