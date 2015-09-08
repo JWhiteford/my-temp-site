@@ -5,13 +5,13 @@
 
 // FOUNDATION & NORMALIZE
 @import "settings"; // settings file from foundation
-@import "vendors/foundation";
+// @import "vendors/foundation";
 
 // UTILITIES
 @import "utilities/custom-mixins";
 
 // BASE
-@import "base/typography";
+// @import "base/typography";
 
 // LAYOUTS
 @import "layout/general";
@@ -24,8 +24,12 @@
 // PAGES
 // @import "pages/home";
 
+
 //  override browsersync popup
 #__bs_notify__ {
   bottom: 0;
-  top: auto !important;
+  left: 0;
+  top: initial !important;
+  border-radius: 0 !important;
+  padding: initial !important;
 }

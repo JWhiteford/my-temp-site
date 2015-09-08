@@ -1,6 +1,4 @@
 ---
-layout:
-
 title: Lorem ipsum dolor adipisicing elit.
 description:
 permalink:
