@@ -2563,8 +2563,8 @@ th.hide-for-touch {
 
 .block {
   text-align: center;
-  background: -webkit-linear-gradient(rgba(164, 123, 165, 0.8), rgba(164, 123, 165, 0.8)), url(../img/5.jpg) no-repeat;
-  background: linear-gradient(rgba(164, 123, 165, 0.8), rgba(164, 123, 165, 0.8)), url(../img/5.jpg) no-repeat;
+  background: -webkit-linear-gradient(rgba(1, 208, 202, 0.8), rgba(1, 208, 202, 0.8)), url(../img/3.jpg) no-repeat;
+  background: linear-gradient(rgba(1, 208, 202, 0.8), rgba(1, 208, 202, 0.8)), url(../img/3.jpg) no-repeat;
   background-size: cover;
   color: #FFFFFF;
   margin: 1rem;
