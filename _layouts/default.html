@@ -4,7 +4,14 @@
 {% endcomment %}
 
   <main class="main{% if page.url == "/index.html" %} row collapse{% endif %}">
+    {% if page.url == "/index.html" %}
+      <header>
+        <img src="{{ site.baseurl }}/img/stacks-logo.png" alt="Stacks">
+      </header>
+    {% endif %}
     {{ content }}
   </main>
+
+  {% include logos.html %}
 
 {% include footer.html %}
