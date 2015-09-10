@@ -2,6 +2,7 @@ var gulp          = require('gulp');
 var sourcemaps    = require('gulp-sourcemaps');
 var sass          = require('gulp-sass');
 var autoprefixer  = require('gulp-autoprefixer');
+var uncss         = require('gulp-uncss');
 var browserSync   = require('browser-sync');
 var cp            = require('child_process');
 var imagemin      = require('gulp-imagemin');
@@ -64,7 +65,17 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('css'));
 });
 
-
+/**
+ * Remove unused css from each page
+ * NOT ATTACHED YET
+ */
+gulp.task('uncss', function () {
+  return gulp.src('css/style.css')
+    .pipe(uncss({
+      html: ['_site/index.html']
+    }))
+    .pipe(gulp.dest('_site/css/uncss'));
+});
 
 
 /**

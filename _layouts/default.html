@@ -12,6 +12,8 @@
     {{ content }}
   </main>
 
-  {% include logos.html %}
+  {% if page.url == "/index.html" %}
+    {% include logos.html %}
+  {% endif %}
 
 {% include footer.html %}
