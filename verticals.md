@@ -3,7 +3,7 @@ title: Lorem ipsum dolor adipisicing elit.
 description:
 permalink: /verticals/
 
-class: menu-open-categories
+class:
 
 author:
 share_image:
@@ -14,51 +14,42 @@ sitemap:
 
 <div class="verticals">
   <ul class="vertical--columns">
-    <li class="navigation__catitem">
-      <a class="navigation__catlink" href="/">
-        <span class="navigation__catbackground" style="background-image:url(uploads/subjects/images/cat-julie.jpg);"></span>
-        <span class="navigation__catcontent">
-          <span class="navigation__cattitle">
-            <span class="navigation__cattitlewrap">
-              <h1 class="title-slanted">public</h1>
-            </span>
+    <li>
+      <a href="/">
+        <span class="block--centered">
+          <span class="vertical--title">
+            <h1>public</h1>
           </span>
-          <span class="navigation__cattext">
-            <p class="navigation__catdesc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, maxime suscipit consequuntur magnam eveniet alias recusandae hic corporis, optio obcaecati.</p>
+          <span class="vertical--desc">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, maxime suscipit consequuntur magnam eveniet alias recusandae hic corporis, optio obcaecati.</p>
             <span class="btn--fake">Lorem ipsum dolor sit.</span>
           </span>
         </span>
       </a>
     </li>
-    <li class="navigation__catitem">
-      <a class="navigation__catlink" href="/">
-        <span class="navigation__catbackground" style="background-image:url(uploads/subjects/images/cat-audrey.jpg);"></span>
-        <span class="navigation__catcontent">
-          <span class="navigation__cattitle">
-            <span class="navigation__cattitlewrap">
-              <h1 class="title-slanted">academic</h1>
-        </span>
-        </span>
-        <span class="navigation__cattext">
-            <p class="navigation__catdesc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae optio quos labore tempora aliquid!</p>
+    <li>
+      <a href="/">
+        <span class="block--centered">
+          <span class="vertical--title">
+            <h1>academic</h1>
+          </span>
+          <span class="vertical--desc">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae optio quos labore tempora aliquid!</p>
             <span class="btn--fake">Lorem ipsum dolor sit.</span>
-        </span>
+          </span>
         </span>
       </a>
     </li>
-    <li class="navigation__catitem">
-      <a class="navigation__catlink" href="/">
-        <span class="navigation__catbackground" style="background-image:url(uploads/subjects/images/cat-rosa.jpg);"></span>
-        <span class="navigation__catcontent">
-          <span class="navigation__cattitle">
-            <span class="navigation__cattitlewrap">
-              <h1 class="title-slanted">hospital</h1>
-        </span>
-        </span>
-        <span class="navigation__cattext">
-            <p class="navigation__catdesc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quo facere magni, reprehenderit. Atque, ut harum hic quidem mollitia dolore quisquam sapiente..</p>
+    <li>
+      <a href="/">
+        <span class="block--centered">
+          <span class="vertical--title">
+            <h1>hospital</h1>
+          </span>
+          <span class="vertical--desc">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quo facere magni, reprehenderit. Atque, ut harum hic quidem mollitia dolore quisquam sapiente..</p>
             <span class="btn--fake">Lorem ipsum dolor sit.</span>
-        </span>
+          </span>
         </span>
       </a>
     </li>
