@@ -122,15 +122,6 @@ $black:             #000000;
 $primary-color:     #358399;
 $secondary-color:   #c4c4c4;
 
-
-/*
-  THIS SHOULD BE IN A DIFFERENT FILE
-*/
-// this is to have full screen columns
-$site-border:     3rem;
-$body-padding:    $site-border;
-
-
 // testing of images & color combos
 $bg-1:          "../img/1.jpg";
 $bg-2:          "../img/2.jpg";
@@ -149,7 +140,7 @@ $clr-4:       #a47ba5;
 $clr-5:       #6e3e68;
 
 $bg-image:      $bg-3;
-$main-color:    $clr-1;
+$main-color:    $clr-0;
 
 
 
@@ -162,7 +153,7 @@ $lightGrey:         #c4c4c4;
 $mid-grey:          $monsoon;
 
 // We use these to control various global styles
-$body-bg:           $snow;
+$body-bg:           $white-smoke;
 $body-font-color:   $oil;
 
 $border-color: darken($body-bg, 10%);

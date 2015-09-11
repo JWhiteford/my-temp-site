@@ -3,17 +3,21 @@
   {% include nav-data.html %}
 {% endcomment %}
 
-  <main class="main{% if page.url == "/index.html" %} row collapse{% endif %}">
-    {% if page.url == "/index.html" %}
-      <header>
-        <img src="{{ site.baseurl }}/img/stacks-logo.png" alt="Stacks">
-      </header>
-    {% endif %}
-    {{ content }}
-  </main>
+  <main class="main">
+     <div class="verticals">
+      {% if page.url == "/index.html" %}
+        <header>
+          <img src="{{ site.baseurl }}/img/stacks-logo.png" alt="Stacks">
+        </header>
+        {{ content }}
+        {% include logos.html %}
 
-  {% if page.url == "/index.html" %}
-    {% include logos.html %}
-  {% endif %}
+        {% else %}
+          <div class="row collapse">
+            {{ content }}
+          </div>
+      {% endif %}
+    </div>
+  </main>
 
 {% include footer.html %}

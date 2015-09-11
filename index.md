@@ -3,7 +3,7 @@ title: Lorem ipsum dolor adipisicing elit.
 description:
 permalink:
 
-class: full--height
+class: front
 
 author:
 share_image:
@@ -11,26 +11,47 @@ share_image:
 sitemap:
   exclude: 'no'
 ---
-<div class="block">
-  <div class="centered">
-    <section class="thirds">
-      <article class="v-center">
-        <h1>Public</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, recusandae?</p>
-        <a href="articles/sample-post/">link to sub-page</a>
-      </article>
-    </section>
-    <section class="thirds">
-      <article class="v-center">
-        <h1>Academic</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, eligendi!</p>
-      </article>
-    </section>
-    <section class="thirds">
-      <article class="v-center">
-        <h1>Hospital</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, repudiandae!</p>
-      </article>
-    </section>
+
+  <div class="verticals">
+    <ul class="vertical--columns">
+      <li>
+        <a href="/public-library-software">
+          <span class="block--centered">
+            <span class="vertical--title">
+              <h1>public</h1>
+            </span>
+            <span class="vertical--desc">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, maxime suscipit consequuntur magnam eveniet alias recusandae hic corporis, optio obcaecati.</p>
+              <span class="btn--fake">Lorem ipsum dolor sit.</span>
+            </span>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="/public-library-software">
+          <span class="block--centered">
+            <span class="vertical--title">
+              <h1>academic</h1>
+            </span>
+            <span class="vertical--desc">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae optio quos labore tempora aliquid!</p>
+              <span class="btn--fake">Lorem ipsum dolor sit.</span>
+            </span>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="/public-library-software">
+          <span class="block--centered">
+            <span class="vertical--title">
+              <h1>hospital</h1>
+            </span>
+            <span class="vertical--desc">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quo facere magni, reprehenderit. Atque, ut harum hic quidem mollitia dolore quisquam sapiente..</p>
+              <span class="btn--fake">Lorem ipsum dolor sit.</span>
+            </span>
+          </span>
+        </a>
+      </li>
+    </ul>
   </div>
-</div>

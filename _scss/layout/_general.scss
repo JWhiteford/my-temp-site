@@ -22,3 +22,9 @@ html {
   background: $secondary-color;
   text-shadow: none;
 }
+
+
+// override row max width
+.row {
+  max-width: initial;
+}
