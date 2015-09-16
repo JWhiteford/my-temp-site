@@ -13,6 +13,7 @@ sitemap:
 ---
 <div class="half--page">
   <div class="full--centered">
+    <img src="/img/stacks-logo.png" alt="">
     <h1>Public</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi possimus, ipsum nobis hic. Provident deserunt, tempore deleniti laudantium voluptatum, at amet neque reiciendis sit est maiores repellendus quidem illo delectus, distinctio ipsum nesciunt vitae vero? Doloremque aut deserunt nulla ipsam quae impedit delectus consequatur, ab tempora, dicta, nostrum cum vitae.</p>
   </div>
@@ -32,5 +33,5 @@ sitemap:
     <li>dolor sit amet, consectetur.</li>
   </ul>
   <br>
-  <a href="/" class="btn--fake">DEMO</a>
+  <a href="/" class="btn--fake" data-type="page-transition">start free trial</a>
 </div>

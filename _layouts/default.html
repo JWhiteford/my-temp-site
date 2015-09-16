@@ -4,19 +4,21 @@
 {% endcomment %}
 
   <main class="main">
-     <div class="verticals">
-      {% if page.url == "/index.html" %}
-        <header>
-          <img src="{{ site.baseurl }}/img/stacks-logo.png" alt="Stacks">
-        </header>
-        {{ content }}
-        {% include logos.html %}
+    <div class="cd-index cd-main-content">
+       <div class="verticals">
+        {% if page.url == "/index.html" %}
+          <header>
+            <img src="{{ site.baseurl }}/img/stacks-logo.png" alt="Stacks">
+          </header>
+          {{ content }}
+          {% include logos.html %}
 
-        {% else %}
-          <div class="row collapse">
-            {{ content }}
-          </div>
-      {% endif %}
+          {% else %}
+            <div class="row collapse">
+              {{ content }}
+            </div>
+        {% endif %}
+      </div>
     </div>
   </main>
 
