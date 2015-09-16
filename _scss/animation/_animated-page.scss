@@ -1,0 +1,106 @@
+/* Force Hardware Acceleration */
+%hardware {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  transition: transform 0.4s 0.4s;
+}
+
+body::after, body::before {
+  /* these are the 2 half blocks which cover the content once the animation is triggered */
+  content: '';
+  height: 50vh;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  background-color: $white;
+  z-index: 1;
+
+  @extend %hardware;
+}
+
+body::before {
+  top: 0;
+  transform: translateY(-100%);
+}
+body::after {
+  bottom: 0;
+  transform: translateY(100%);
+}
+body.page-is-changing::after, body.page-is-changing::before {
+  transform: translateY(0);
+  transition: transform 0.4s 0s;
+}
+
+
+.cd-cover-layer {
+  /* layer that covers the content when the animation is triggered */
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  transform: translateX(-50%) translateY(-50%);
+  height: calc(100% - 20px);
+  width: calc(100% - 20px);
+  opacity: 0;
+  visibility: hidden;
+  background-color: #4089a6;
+  transition: opacity 0.4s 0.4s, visibility 0s 0.8s;
+
+  .page-is-changing & {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s 0s, visibility 0s 0s;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .cd-cover-layer {
+    height: calc(100% - 40px);
+    width: calc(100% - 40px);
+  }
+}
+
+.cd-loading-bar {
+  /* this is the loding bar - visible while switching from one page to the following one */
+  position: fixed;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  height: 2px;
+  width: 90%;
+  background-color: #4089a6;
+  visibility: hidden;
+  transition: visibility 0s 0.4s, transform 0.4s 0s ease-in;
+  @extend %hardware;
+}
+.cd-about .cd-loading-bar {
+  background-color: #283040;
+}
+.cd-about .cd-loading-bar::before {
+  background-color: #4089a6;
+}
+.cd-loading-bar::before {
+  /* this is the progress bar inside the loading bar */
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #283040;
+  @extend %hardware;
+}
+.page-is-changing .cd-loading-bar {
+  visibility: visible;
+  transform: translateX(-50%) translateY(-50%) scaleX(0.3);
+  transition: visibility 0s 0.3s, transform 0.4s 0.4s;
+}
+.page-is-changing .cd-loading-bar::before {
+  transform: scaleX(1);
+  transition: transform 0.8s 0.8s ease-in;
+}
+@media only screen and (min-width: 768px) {
+  .cd-loading-bar {
+    width: calc(100% - 40px);
+  }
+}

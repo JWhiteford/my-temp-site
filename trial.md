@@ -12,82 +12,92 @@ sitemap:
   exclude: 'no'
 ---
 
-  <div class="half--page">
-    <div class="full--centered">
-      <img src="/img/stacks-logo.png" alt="">
-
-      <h1>Start free trial</h1>
-      <form action="">
-        <lable>Library Name</lable>
-        <input type="text" placeholder="your Library Name">
-
-        <label>Library Slogan</label>
-        <input type="text" placeholder="Your Library Slogan">
-
-        <label>Upload Your Logo
-          <input type="file">
-        </label>
-        <a href="/">start free trial</a>
-      </form>
+<div class="page--full">
+  <form action="" name="">
+    <div class="page--half">
+      <div class="section--content full--width">
+        <h1>Start Free Trial</h1>
+        <div class="form--row">
+          <div class="form--group">
+            <label for="lib-name">Library Name</label>
+            <input id="lib-name" type="text" placeholder="your Library Name">
+          </div>
+          <div class="form--group">
+            <label for="lib-slogan">Library Slogan</label>
+            <input id="lib-slogan" type="text" placeholder="Your Library Slogan">
+          </div>
+        </div>
+        <div class="form--row">
+          <div class="form--group">
+            <label for="lib-logo">Upload Your Logo</label>
+            <input id="lib-logo" type="file" name="pic" accept="image/*">
+          </div>
+          <div class="form--group">
+            <input id="lib-number" type="number" name="quantity" min="1" max="200">
+            <label for="lib-number">Number of Sites</label>
+          </div>
+        </div>
+        <div class="form--row__submit">
+          <input type="submit" value="Start free trial" name="trial-submit-quick">
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="half--page" style="background: white; float: right;">
-    <h4>Lorem ipsum dolor sit amet.</h4>
-<h3>Integrations</h3>
-<label>EDS Search</label>
-<input type="text" placeholder="Your API Key">
-<a href="#" data-reveal-id="videoModal"><span class="round label">Help Me</span></a>
+    <div class="page--half">
+      <div class="section--content full--width">
+
+        <h2>Integrations</h2>
+        <label for="lib-eds">EDS Search</label>
+        <input id="lib-eds" type="text" placeholder="Your API Key">
+        <a href="#"><span class="help">Help Me</span></a>
+
+        <h3>ILS Integration</h3>
+        <label for="lib-ils">ILS Integration</label>
+        <input id="lib-ils" type="text" placeholder="Polaris or Sirsi Username">
+        <a href="#"><span class="help">Help Me</span></a>
+
+        <label for="lib-ils-pass">ILS Integration Password</label>
+        <input id="lib-ils-pass" type="text" placeholder="Polaris or Sirsi Password">
+        <a href="#"><span class="help">Help Me</span></a>
+
+        <h3>Book Jackets</h3>
+        <label for="lib-bookjacket">Book Jacket Username</label>
+        <input id="lib-bookjacket" type="text" placeholder="Booker Syndetics or Content Cafe Username">
+        <a href="#"><span class="help">Help Me</span></a>
+
+        <label for="lib-bookjacket-pass">Book Jacket Password</label>
+        <input id="lib-bookjacket-pass" type="text" placeholder="Enter Polaris or Sirsi Password">
+        <a href="#"><span class="help">Help Me</span></a>
+
+        <h3>Reviews</h3>
+        <label for="lib-chilifresh">ChiliFresh Username</label>
+        <input id="lib-chilifresh" type="text" placeholder="ChiliFresh Username">
+        <a href="#"><span class="help">Help Me</span></a>
+
+        <label for="lib-chilifresh-pass">ChiliFresh Password</label>
+        <input id="lib-chilifresh-pass" type="text" placeholder="ChiliFresh Password">
+        <a href="#"><span class="help">Help Me</span></a>
+
+        <h3>Related Content</h3>
+        <label for="lib-novelist">Novelist Select Username</label>
+        <input id="lib-novelist" type="text" placeholder="Novelist Select Username">
+        <a href="#"><span class="help">Help Me</span></a>
+
+        <label for="lib-novelist-pass">Novelist Select Password</label>
+        <input id="lib-novelist-pass" type="text" placeholder="Novelist Select Password">
+        <a href="#"><span class="help">Help Me</span></a>
+
+        <button type="button">suggest</button>
+        <h3>Newsletter</h3>
+        <label for="lib-newsletter">Subscribe Link</label>
+        <input id="lib-newsletter" type="text" placeholder="Newsletter Link">
+        <a href="#"><span class="help">Help Me</span></a>
+
+        <p><a href="/" data-type="page-transition">back to home</a></p>
+        <input type="submit" value="Start free trial" name="trial-submit-long">
+      </div>
 
 
-<label>ILS Integration</label>
-<input type="text" placeholder="Polaris or Sirsi Username">
-<a href="#" data-reveal-id="videoModal"><span class="round label">Help Me</span></a>
-
-
-<label>ILS Integration Password</label>
-<input type="text" placeholder="Polaris or Sirsi Password">
-<a href="#" data-reveal-id="videoModal"><span class="round label">Help Me</span></a>
-
-
-<h3>Book Jackets</h3>
-<label>Book Jacket Username</label>
-<input type="text" placeholder="Booker Syndetics or Content Cafe Username">
-<a href="#" data-reveal-id="videoModal"><span class="round label">Help Me</span></a>
-
-<label>Book Jacket Password</label>
-<input type="text" placeholder="Enter Polaris or Sirsi Password">
-<a href="#" data-reveal-id="videoModal"><span class="round label">Help Me</span></a>
-
-
-
-
-<h3>Reviews</h3>
-<label>ChiliFresh Username</label>
-<input type="text" placeholder="ChiliFresh Username">
-<a href="#" data-reveal-id="videoModal"><span class="round label">Help Me</span></a>
-
-<label>ChiliFresh Password</label>
-<input type="text" placeholder="ChiliFresh Password">
-<a href="#" data-reveal-id="videoModal"><span class="round label">Help Me</span></a>
-
-<h3>Related Content</h3>
-<label>Novelist Select Username</label>
-<input type="text" placeholder="Novelist Select Username">
-<a href="#" data-reveal-id="videoModal"><span class="round label">Help Me</span></a>
-
-
-<label>Novelist Select Password</label>
-<input type="text" placeholder="Novelist Select Password">
-<a href="#" data-reveal-id="videoModal"><span class="round label">Help Me</span></a>
-<p class="text-center"><a href="#" class="button">Suggest</a></p>
-
-
-
-
-<h3>Newsletter</h3>d
-<label>Subscribe Link</label>        
-<input type="text" placeholder="Newsletter Link">
-<a href="#" data-reveal-id="videoModal"><span class="round label">Help Me</span></a>
-
-  </div>
+    </div>
+  </form>
+</div>

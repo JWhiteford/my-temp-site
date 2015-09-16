@@ -21,15 +21,16 @@ body {
 }
 
 .page--half {
-  padding-right: $body-padding/2;
-  padding-left: $body-padding/2;
+  // padding-right: $body-padding/2;
+  // padding-left: $body-padding/2;
 
   &:nth-of-type(1) {
     background: $color-1;
   }
 
   @include MQ(M) {
-    width: calc(50% - #{$body-padding});
+    width: 50%;
+    // width: calc(50% - #{$body-padding});
     display: block;
     float: left;
     height: calc(100vh - #{$body-padding * 2});
@@ -38,15 +39,22 @@ body {
 }
 
 .section--content {
-  padding: ($body-padding/2) 0;
-  border: 1px solid $border-color;
+  padding: ($body-padding/2);
+  // border: 1px solid $border-color;
 
   @include MQ(M) {
     padding: initial;
     @include center;
 
     &.full--width {
-      width: calc(100% - #{$body-padding * 2});
+      // width: calc(100% - #{$body-padding * 2});
+      width: 100%;
+    }
+
+    h1, h2, h3, h4, h5, h6,
+    p {
+      padding-right: $body-padding;
+      padding-left: $body-padding;
     }
   }
 }
@@ -65,5 +73,17 @@ body {
   .page--quarter__top,
   .page--quarter__bottom {
     @extend %quarter !optional;
+  }
+}
+
+
+.video--frame {
+  background: $black;
+  position: relative;
+  overflow: hidden;
+  // margin-right: -$body-padding;
+
+  .section--content {
+    padding: 0;
   }
 }

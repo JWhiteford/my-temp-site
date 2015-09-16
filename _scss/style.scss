@@ -10,7 +10,6 @@
 
 // UTILITIES
 @import "utilities/custom-mixins";
-// @import "utilities/animated-page";
 
 // BASE
 @import "base/typography";
@@ -27,10 +26,13 @@
 
 // COMPONENTS
 // @import "components/buttons";
+@import "components/forms";
 
 // PAGES
 // @import "pages/home";
 
+// ANIMATION
+@import "animation/animated-page";
 
 
 
