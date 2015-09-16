@@ -6,10 +6,10 @@ main {
 html * {
   -webkit-overflow-scrolling: touch;
 }
-body,
-html {
-  height: 100%;
-}
+// body,
+// html {
+//   height: 100%;
+// }
 
 ::-moz-selection {
   color: $primary-color;

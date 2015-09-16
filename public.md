@@ -11,6 +11,29 @@ share_image:
 sitemap:
   exclude: 'no'
 ---
+
+<div class="page--full">
+  <div class="page--half">
+    <div class="section--content">
+      1st
+    </div>
+  </div>
+  <div class="page--half">
+    <div class="page--quarter__top">
+      <div class="section--content">
+        2nd
+      </div>
+    </div>
+    <div class="page--quarter__bottom">
+      <div class="section--content full--width">
+        3rd
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui voluptates adipisci quos reiciendis, neque beatae dolorem enim fugiat inventore mollitia. Rerum veniam, dicta consequuntur necessitatibus accusantium cumque numquam ut, eius esse, sed quae pariatur. Iusto, tempora accusantium deserunt minus dolore.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 
 <div class="half--page">
   <div class="full--centered">
     <img src="/img/stacks-logo.png" alt="">
@@ -34,4 +57,4 @@ sitemap:
   </ul>
   <br>
   <a href="/" class="btn--fake" data-type="page-transition">start free trial</a>
-</div>
+</div> -->
