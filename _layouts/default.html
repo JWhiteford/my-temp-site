@@ -3,10 +3,12 @@
   {% include nav-data.html %}
 {% endcomment %}
 
-  <main class="main">
-    <div class="cd-index cd-main-content">
-       <div class="verticals">
-        {% if page.url == "/index.html" %}
+  <a href="/" class="home--link" data-type="page-transition">Stacks Library Search</a>
+
+  <main>
+    <div class="cd-main-content">
+      {% if page.url == "/index.html" %}
+        <div class="verticals">
           <header>
             <img src="{{ site.baseurl }}img/stacks-logo.png" alt="Stacks">
           </header>
@@ -17,8 +19,8 @@
             <div class="row collapse">
               {{ content }}
             </div>
-        {% endif %}
-      </div>
+        </div>
+      {% endif %}
     </div>
   </main>
 

@@ -18,15 +18,16 @@
 @import "layout/media-queries";
 @import "layout/general";
 @import "layout/page-division";
-// @import "layout/verticals";
+@import "layout/verticals";
 // @import "layout/page-border";
 // @import "layout/full-height";
 // @import "layout/header";
 // @import "layout/footer";
 
 // COMPONENTS
-// @import "components/buttons";
+@import "components/buttons";
 @import "components/forms";
+@import "components/lists";
 
 // PAGES
 // @import "pages/home";

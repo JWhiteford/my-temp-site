@@ -26,6 +26,7 @@ body {
 
   &:nth-of-type(1) {
     background: $color-1;
+    color: $color-2;
   }
 
   @include MQ(M) {

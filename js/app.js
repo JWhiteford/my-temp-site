@@ -47,7 +47,7 @@ jQuery(document).ready(function(event){
     section.load(url+' .cd-main-content > *', function(event){
       // load new content and replace <main> content with the new one
       $('main').html(section);
-      //if browser doesn't support CSS transitions - dont wait for the end of transitions
+      //if browser doesn't support CSS transitions - don't wait for the end of transitions
       var delay = ( transitionsSupported() ) ? 1200 : 0;
       setTimeout(function(){
         //wait for the end of the transition on the loading bar before revealing the new content
@@ -72,4 +72,49 @@ jQuery(document).ready(function(event){
   function transitionsSupported() {
     return $('html').hasClass('csstransitions');
   }
+});
+
+
+$('.form').find('input, textarea').on('keyup blur focus', function (e) {
+
+  var $this = $(this),
+      label = $this.prev('label');
+
+    if (e.type === 'keyup') {
+      if ($this.val() === '') {
+          label.removeClass('active highlight');
+        } else {
+          label.addClass('active highlight');
+        }
+    } else if (e.type === 'blur') {
+      if( $this.val() === '' ) {
+        label.removeClass('active highlight');
+      } else {
+        label.removeClass('highlight');
+      }
+    } else if (e.type === 'focus') {
+
+      if( $this.val() === '' ) {
+        label.removeClass('highlight');
+      }
+      else if( $this.val() !== '' ) {
+        label.addClass('highlight');
+      }
+    }
+
+});
+
+$('.tab a').on('click', function (e) {
+
+  e.preventDefault();
+
+  $(this).parent().addClass('active');
+  $(this).parent().siblings().removeClass('active');
+
+  target = $(this).attr('href');
+
+  $('.tab-content > div').not(target).hide();
+
+  $(target).fadeIn(600);
+
 });
