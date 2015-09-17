@@ -1,3 +1,47 @@
+header {
+  display: none;
+
+  @include MQ(M) {
+    position: absolute;
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin: $site-border auto 0;
+    z-index: 20;
+  }
+}
+footer {
+  font-size: .75rem;
+  color: $white;
+  position: absolute;
+  display: block;
+  text-align: center;
+  bottom: 0;
+  margin: $site-border auto 0;
+  z-index: 20;
+  // width: calc(100% - #{$site-border});
+  width: 100%;
+
+  @include MQ(M) {
+    // width: 100%;
+    margin-bottom: $site-border;
+  }
+
+  h2 {
+    opacity: .5;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    opacity: .25;
+  }
+  li {
+    display: inline-block;
+    padding: 0 1rem;
+  }
+}
+
 .verticals,
 .verticals > li,
 .verticals li a {
@@ -8,19 +52,21 @@
 }
 
 .verticals {
-  position: fixed;
-  z-index: 200;
-  top: $site-border;
-  right: $site-border;
-  bottom: $site-border;
-  left: $site-border;
-  overflow: hidden;
-  width: calc(100vw - #{$site-border * 2});
   height: calc(100vh - #{$site-border * 2});
-  // border: ($site-border / 2) solid $white;
-  background: $white;
-  transition-delay: .5s;
+  background: $color-1;
+  position: relative;
 
+  @include MQ(M) {
+    position: fixed;
+    z-index: 15;
+    top: $site-border;
+    right: $site-border;
+    bottom: $site-border;
+    left: $site-border;
+    overflow: hidden;
+    width: calc(100vw - #{$site-border * 2});
+    transition-delay: .5s;
+  }
   // @include MQ(M) {
   //   border: $site-border solid $white;
   // }
@@ -53,7 +99,7 @@
       position: relative;
     }
     @include MQ(M) {
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
   }
 }
@@ -83,6 +129,7 @@
   li {
     display: inline-block;
     width: 100%;
+    height: 25%;
     vertical-align: top;
     position: relative;
     margin: 0;
@@ -93,19 +140,60 @@
     background: rgba($main-color, 0.6);
     box-sizing: border-box;
 
+    // &::after {
+    //   content: '';
+    //   display: block;
+    //   // position: absolute;
+    //   left: 0;
+    //   top: 0;
+    //   bottom: 0;
+    //   width: 100%;
+    //   height: 100%;
+    //   z-index: 1;
+    //   opacity: 0.6;
+    //   background-repeat: no-repeat;
+    //   background-position: 50% 0;
+    //   background-size: cover;
+    // }
+
+    // &:first-of-type {
+    //   &::after {
+    //     background-image: url(../img/5.jpg);
+    //   }
+    // }
+
+    // &:nth-of-type(2n) {
+    //   &::after {
+    //     background-image: url(../img/6.jpg);
+    //   }
+    // }
+
+    // &:nth-of-type(3n) {
+    //   &::after {
+    //     background-image: url(../img/7.jpg);
+    //   }
+    // }
+
     &:first-of-type {
       background-image: url(../img/5.jpg);
     }
+
     &:nth-of-type(2n) {
       background-image: url(../img/6.jpg);
     }
+
     &:nth-of-type(3n) {
       background-image: url(../img/7.jpg);
     }
 
-    @include MQ(S) {
-      width: 100%;
-      height: 25%;
+
+    @include MQ(M) {
+      opacity: .2;
+      transition: opacity .3s;
+    }
+
+    &:hover {
+      opacity: 1;
     }
 
     @include MQ(M) {
@@ -119,6 +207,8 @@
     }
   }
 }
+
+
 
 // fake buttons to look like buttons but not act as links
 .btn--fake {
@@ -181,7 +271,6 @@
   }
 }
 
-
 .vertical--columns {
 
   a {
@@ -216,6 +305,7 @@
     }
 
     &:hover {
+
       @include MQ(M) {
         background-color: rgba($oil, .8);
 

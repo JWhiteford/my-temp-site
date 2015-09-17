@@ -13,7 +13,7 @@ sitemap:
 ---
 
 <div class="page--full">
-  <div class="page--half">
+  <div class="page--half public">
     <div class="section--content">
       <h1>Public Library</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet!</p>
@@ -40,7 +40,7 @@ sitemap:
           <li>website CMS</li>
         </ul>
 
-        <p><a href="/free-trial" class="btn" data-type="page-transition">start free trial</a></p>
+        <p><a href="/free-trial/" class="btn" data-type="page-transition">start free trial</a></p>
       </div>
     </div>
   </div>

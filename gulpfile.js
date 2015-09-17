@@ -58,7 +58,7 @@ gulp.task('sass', function () {
     }))
     .pipe(sourcemaps.write({includeContent: false}))
     .pipe(sourcemaps.init({loadMaps: true}))
-    .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 9'], { cascade: true }))
+    .pipe(autoprefixer(['last 3 versions', '> 1%', 'ie 9'], { cascade: true }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('_site/css'))
     .pipe(browserSync.reload({stream:true}))
@@ -84,7 +84,7 @@ gulp.task('uncss', function () {
  */
 gulp.task('watch', function () {
   gulp.watch('_scss/**/*.scss', ['sass']);
-  gulp.watch(['*.html', '*.md', '_layouts/*.html', '_pages/*.html', '_includes/*.html', '_posts/*'], ['jekyll-rebuild']);
+  gulp.watch(['*.html', '*.md', '_layouts/*.html', '_pages/*.html', '_includes/*.html', '_posts/*', 'js/*.js'], ['jekyll-rebuild']);
 });
 
 

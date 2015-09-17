@@ -5,23 +5,21 @@
 
   <a href="/" class="home--link" data-type="page-transition">Stacks Library Search</a>
 
-  <main>
-    <div class="cd-main-content">
-      {% if page.url == "/index.html" %}
-        <div class="verticals">
-          <header>
-            <img src="{{ site.baseurl }}img/stacks-logo.png" alt="Stacks">
-          </header>
-          {{ content }}
-          {% include logos.html %}
+  <main class="cd-main-content">
+    {% if page.url == "/index.html" %}
+      <div class="verticals">
+        <header>
+          <img src="{{ site.baseurl }}img/stacks-logo.png" alt="Stacks">
+        </header>
+        {{ content }}
+        {% include logos.html %}
 
-          {% else %}
-            <div class="row collapse">
-              {{ content }}
-            </div>
-        </div>
-      {% endif %}
-    </div>
+        {% else %}
+          <div class="row collapse">
+            {{ content }}
+          </div>
+      </div>
+    {% endif %}
   </main>
 
 {% include footer.html %}
