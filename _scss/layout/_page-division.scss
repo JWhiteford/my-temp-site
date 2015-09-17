@@ -34,6 +34,7 @@ body {
     float: left;
     height: calc(100vh - #{$body-padding * 2});
     position: relative;
+    overflow-y: hidden;
   }
 
   &.public {
@@ -84,9 +85,12 @@ body {
 .video--frame {
   background: $black;
   position: relative;
-  overflow: hidden;
+  // overflow: hidden;
   // margin-right: -$body-padding;
 
+  @include MQ(M) {
+    transform: translateX(0) translateY(-2rem);
+  }
   .section--content {
     padding: 0;
   }
