@@ -1,7 +1,6 @@
+// probably don't need mixin with autoprefixer
 @mixin transition() {
   transition: all .5s ease;
-  -webkit-transition: all .5s ease;
-  -moz-transition: all .5s ease;
 }
 
 // center vertically and/or horizontally an absolute positioned element
@@ -39,4 +38,15 @@
 @mixin column($percentage, $float-direction:left) {
   width: 100% * $percentage;
   float: $float-direction;
+}
+
+// rem fallback - credits: http://zerosixthree.se/
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
 }
