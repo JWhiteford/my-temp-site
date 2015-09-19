@@ -11,9 +11,9 @@
   <!-- Google & Bing webmaster tools verification" -->
   {% if site.google_verify %}<meta name="google-site-verification" content="{{ site.google_verify }}">{% endif %}
   {% if site.bing_verify %}<meta name="msvalidate.01" content="{{ site.bing_verify }}">{% endif %}
-  <link rel="shortcut icon" href="{{ site.baseurl }}/img/favicon.ico">
-  <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
-  {% if page.url contains "/articles/" %}<link rel="stylesheet" href="{{ site.baseurl }}/css/blog.css">{% endif %}
+  <link rel="shortcut icon" href="{{ site.baseurl }}img/favicon.ico">
+  <link rel="stylesheet" href="{{ site.baseurl }}css/style.css">
+  {% if page.url contains "/articles/" %}<link rel="stylesheet" href="{{ site.baseurl }}css/blog.css">{% endif %}
   <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}">
 
   <!-- Google+ -->
@@ -41,7 +41,8 @@
   <meta property="og:image" content="{% if page.shareimage != nil %}{{ page.shareimage }}{% else %}{{ site.url }}{{ site.share_logo }}{% endif %}" />
   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
   <meta property="og:site_name" content="{{ site.name }}" />
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script>window.jQuery || document.write('<script src="{{ site.baseurl }}js/modernizr.js"><\/script>')</script>
 </head>
 
-<body {% if page.class != nil %} class="{{ page.class }}" {% endif %}>
+<body{% if page.class != nil %} class="{{ page.class }}" {% endif %}>

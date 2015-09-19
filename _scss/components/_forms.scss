@@ -1,0 +1,115 @@
+$field-padding: 1rem;
+
+textarea,
+input[type='text'],
+input[type='file'],
+input[type='number'] {
+  width: 100%;
+  height: 2.5rem;
+  padding: 0;
+  box-sizing: content-box;
+  font-size: $field-padding;
+  font-weight: 300;
+  text-indent: $field-padding;
+  display: block;
+  color: $white;
+  border-radius: 0;
+  transition: border-color .25s ease;
+
+  .form--left & {
+    background: rgba($color-1, .5);
+    border: 1px solid $color-1;
+  }
+
+  &:focus {
+    outline: 0;
+    border-color: $color-2;
+    box-shadow: 0 0 1rem rgba($white, .25);
+  }
+}
+
+input[type='submit'] {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+}
+
+label {
+  position: absolute;
+  font-size: .8rem;
+  left: $field-padding;
+  color: $white;
+  -webkit-backface-visibility: hidden;
+  pointer-events: none;
+  transform: translateY(#{$field-padding / 2});
+  transition: all 0.25s ease;
+
+  .req {
+    margin: 0;
+    color: $white;
+  }
+
+  &.highlight {
+    color: $white;
+  }
+
+  &.active {
+    transform: translateY(-$field-padding * 1.75);
+    left: 0;
+    font-size: .75rem;
+
+    .req {
+      opacity: 0;
+    }
+  }
+}
+
+.field-wrap {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.top-row {
+
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+@include MQ(M) {
+    > div {
+      float: left;
+      width: 48%;
+      margin-right: 4%;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.forgot {
+  margin-top: -$field-padding;
+  text-align: right;
+}
+
+%center-form {
+  max-width: 90%;
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+.form--left {
+  @extend %center-form;
+}
+.form--right {
+  @extend %center-form;
+}

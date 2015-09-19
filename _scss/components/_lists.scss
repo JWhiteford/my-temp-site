@@ -1,0 +1,19 @@
+// fake columns in ul list
+.list-double {
+  list-style-position: inside;
+  padding-bottom: 1rem;
+  overflow: auto;
+  padding: 0;
+
+  @include MQ(M) {
+    padding-left: $body-padding;
+    margin: 0;
+  }
+
+  li {
+    width: 50%;
+    float: left;
+    // display: inline;
+    list-style-type: circle;
+  }
+}

@@ -3,8 +3,21 @@
   {% include nav-data.html %}
 {% endcomment %}
 
-  <main class="main">
-    {{ content }}
+  <a href="/" class="home--link" data-type="page-transition">Stacks Library Search</a>
+
+  <main class="cd-main-content">
+    {% if page.url == "/index.html" %}
+      <div class="verticals">
+        <header>
+          <img src="{{ site.baseurl }}img/stacks-logo.png" alt="Stacks">
+        </header>
+        {{ content }}
+        {% include logos.html %}
+
+        {% else %}
+          {{ content }}
+      </div>
+    {% endif %}
   </main>
 
 {% include footer.html %}

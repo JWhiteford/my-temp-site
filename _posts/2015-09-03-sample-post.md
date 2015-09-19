@@ -1,10 +1,16 @@
 ---
 title:  "Sample post"
+description:
+permalink:
+
 date:   2015-09-03
 categories: Library Software
+
 author: HF Stacks
-# shareimage is for social media posting. FB (Size should be at min 600 x 315. Better size is 1200 x 630) Twitter (min size 280px x 150px)
-shareimage:
+share_image:
+
+sitemap:
+  exclude: 'no'
 ---
 # Lorem ipsum dolor sit amet
 
@@ -15,3 +21,5 @@ Dolorum eaque mollitia facere sapiente enim vel. Lorem ipsum dolor sit amet, con
 - Facilis totam porro sed
 - Laborum expedita, quasi ab voluptates
 - Similique autem, dolore? Expedita, odio.
+
+[link to home page](/)

@@ -4,8 +4,14 @@
 // @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,700italic,400italic);
 
 // FOUNDATION & NORMALIZE
+<<<<<<< HEAD
 @import "settings"; // settings file from foundation
 // @import "vendors/foundation";
+=======
+// @import "vendors/foundation-settings"; // settings file from foundation
+// @import "vendors/foundation";
+@import "variables";
+>>>>>>> dev
 
 // UTILITIES
 @import "utilities/custom-mixins";
@@ -14,16 +20,32 @@
 // @import "base/typography";
 
 // LAYOUTS
+@import "layout/media-queries";
 @import "layout/general";
+@import "layout/page-division";
+@import "layout/verticals";
+// @import "layout/page-border";
+// @import "layout/full-height";
 // @import "layout/header";
 // @import "layout/footer";
 
 // COMPONENTS
-// @import 'components/buttons';
+@import "components/buttons";
+@import "components/forms";
+@import "components/lists";
+@import "components/cards";
+@import "components/features";
 
 // PAGES
 // @import "pages/home";
 
+<<<<<<< HEAD
+=======
+// ANIMATION
+@import "animation/animated-page";
+
+
+>>>>>>> dev
 
 //  override browsersync popup
 #__bs_notify__ {
