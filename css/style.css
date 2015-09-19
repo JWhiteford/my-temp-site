@@ -935,11 +935,11 @@ Slider navigation
         height: 50px;
         line-height: 50px;
         text-align: center;
-        background-color: rgba(64, 122, 149, 0.5);
+        background-color: rgba(0, 0, 0, 0.5);
         -webkit-transition: background 0.2s;
                 transition: background 0.2s; }
         .block-navigation li:hover {
-          background-color: rgba(64, 122, 149, 0.7); }
+          background-color: rgba(0, 0, 0, 0.7); }
       .block-navigation li:first-of-type {
         float: left; }
       .block-navigation li:last-of-type {
@@ -950,16 +950,14 @@ Slider navigation
         width: 100%;
         color: #ffffff;
         border: none;
-        border-top: 2px solid #407A95;
+        font-size: 1.25rem;
         background: transparent;
         cursor: pointer; }
         .block-navigation button.inactive {
           opacity: .3;
           cursor: not-allowed; }
         .block-navigation button:hover:not(.inactive) {
-          background: #407A95;
-          opacity: 1;
-          border-top-color: rgba(255, 255, 255, 0.5); }
+          opacity: 1; }
         .block-navigation button:focus {
           outline: none;
           box-shadow: none; } }

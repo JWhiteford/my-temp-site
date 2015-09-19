@@ -316,11 +316,11 @@ Slider navigation
       height: 50px;
       line-height: 50px;
       text-align: center;
-      background-color: rgba($color-1, .5);
+      background-color: rgba($black, .5);
       transition: background .2s;
 
       &:hover {
-        background-color: rgba($color-1, .7);
+        background-color: rgba($black, .7);
       }
     }
 
@@ -338,7 +338,8 @@ Slider navigation
       width: 100%;
       color: $color-5;
       border: none;
-      border-top: 2px solid $color-1;
+      font-size: 1.25rem;
+      // border-top: 2px solid $color-1;
       background: transparent;
       cursor: pointer;
 
@@ -347,9 +348,9 @@ Slider navigation
         cursor: not-allowed;
       }
       &:hover:not(.inactive) {
-        background: $color-1;
+        // background: $color-1;
         opacity: 1;
-        border-top-color: rgba($white, .5);
+        // border-top-color: rgba($white, .5);
       }
       &:focus {
         outline: none;
