@@ -34,7 +34,8 @@ body {
     float: left;
     height: calc(100vh - #{$body-padding * 2});
     position: relative;
-    overflow-y: hidden;
+    // overflow-y: hidden;
+    overflow-y: scroll;
   }
 
   &.public {

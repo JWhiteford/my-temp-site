@@ -48,89 +48,147 @@ sitemap:
 
         <li id="resp" data-content="responsive" class="selected">
           <div>
-            <h2>Responsive</h2>
+            <!-- <h2>Responsive</h2> -->
             <p>Experience your library anywhere, on any device!</p>
-            <p>Visually showcase desktop, tablet, phone.</p>
+            <!-- <p>Visually showcase desktop, tablet, phone.</p> -->
           </div>
         </li>
 
         <li id="disc" data-content="discovery">
           <div>
-            <h2>Discovery</h2>
+            <!-- <h2>Discovery</h2> -->
 
             <h3>Robust faceted search of your physical and digital resource catalogs</h3>
             <ul>
               <li>Read Online, Download Resources or Place Holds in your ILS</li>
-              <li>EDS Logo | Polaris Logo | Sirsi Logo</li>
+              <!-- <li>EDS Logo | Polaris Logo | Sirsi Logo</li> -->
             </ul>
             <img src="{{ site.baseurl }}img/eds-logo.png" alt="EBSCO Discovery Service logo">
-            <img src="{{ site.baseurl }}img/polaris-logo.png" alt="Polaris logo">
-            <img src="{{ site.baseurl }}img/sirsi-logo.png" alt="Sirsi logo">
+            <div class="feature-row">
+              <div class="feature-card">
+                <img src="{{ site.baseurl }}img/polaris-logo.png" alt="Polaris logo">
+              </div>
+              <div class="feature-card">
+                <img src="{{ site.baseurl }}img/sirsi-logo.png" alt="Sirsi logo">
+              </div>
+            </div>
 
             <h3>Integrated ILS Details with Reviews &#38; Recommendations</h3>
             <ul>
               <li>Reviews, Similar Titles, Similar Authors Similar Series</li>
-              <li>Baker &#38; Taylor Logo | Chilifresh Logo | EBSCO Novelist Select Logo</li>
+              <!-- <li>Baker &#38; Taylor Logo | Chilifresh Logo | EBSCO Novelist Select Logo</li> -->
             </ul>
-            <img src="{{ site.baseurl }}img/baker-taylor-logo.png" alt="Baker Taylor logo">
-            <img src="{{ site.baseurl }}img/chilifresh-logo.png" alt="Chilifresh logo">
-            <img src="{{ site.baseurl }}img/novelist-logo.png" alt="Novelist Select logo">
+            <div class="feature-row">
+              <div class="feature-card">
+                <img src="{{ site.baseurl }}img/baker-taylor-logo.png" alt="Baker Taylor logo">
+              </div>
+              <div class="feature-card">
+                <img src="{{ site.baseurl }}img/chilifresh-logo.png" alt="Chilifresh logo">
+              </div>
+            </div>
+            <div class="feature-row">
+              <div class="feature-card">
+                <img src="{{ site.baseurl }}img/novelist-logo.png" alt="Novelist Select logo">
+              </div>
+            </div>
 
-            <h3>Book Jackets</h3>
-            <ul>
-              <li>Load subscription jackets or use themed icons</li>
-              <li>Bowker Syndetics Logo | Content Cafe Logo</li>
-            </ul>
-            <img src="{{ site.baseurl }}img/bowker-syndetics-logo.png" alt="Bowker Syndetics logo">
-            <img src="{{ site.baseurl }}img/content-cafe-logo.png" alt="Content Cafe logo">
 
-            <h3>Social Media</h3>
-            <p>Share and connect via Goodreads, Facebook, Twitter &#38; Google+</p>
-            <img src="{{ site.baseurl }}img/goodreads-logo.png" alt="Goodreads logo">
-            <img src="{{ site.baseurl }}img/facebook-logo.png" alt="Facebook logo">
-            <img src="{{ site.baseurl }}img/twitter-logo.png" alt="Twitter logo">
-            <img src="{{ site.baseurl }}img/google-plus-logo.png" alt="Google+ logo">
+
+            <div class="feature-row">
+              <div class="feature-card">
+                <h3>Book Jackets</h3>
+                <!-- <ul>
+                  <li>Load subscription jackets or use themed icons</li>
+                  <li>Bowker Syndetics Logo | Content Cafe Logo</li>
+                </ul> -->
+                <img src="{{ site.baseurl }}img/bowker-syndetics-logo.jpg" alt="Bowker Syndetics logo">
+                <img src="{{ site.baseurl }}img/content-cafe-logo.png" alt="Content Cafe logo">
+              </div>
+
+              <div class="feature-card">
+                <h3>Social Media</h3>
+                <p>Share and connect via Goodreads, Facebook, Twitter &#38; Google+</p>
+                <div class="feature-row">
+                  <div class="feature-card">
+                    <img src="{{ site.baseurl }}img/goodreads-logo.png" alt="Goodreads logo">
+                  </div>
+                  <div class="feature-card">
+                    <img src="{{ site.baseurl }}img/facebook-logo.png" alt="Facebook logo">
+                  </div>
+                </div>
+                <div class="feature-row">
+                  <div class="feature-card">
+                    <img src="{{ site.baseurl }}img/twitter-logo.png" alt="Twitter logo">
+                  </div>
+                  <div class="feature-card">
+                    <img src="{{ site.baseurl }}img/google-plus-logo.png" alt="Google+ logo">
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </li>
 
         <li id="ils" data-content="ils">
           <div>
-            <h2>ILS Integration</h2>
+            <!-- <h2>ILS Integration</h2> -->
 
             <h3>Single Sign On</h3>
             <p>Patron authentication works with Polaris ILS, SirsiDynix Symphony, SirsiDynix Horizon and EZproxy for optimal user experience</p>
-            <p>Version specific Logos for Sirsi products + Polaris Logo. EZProxy</p>
-            <img src="{{ site.baseurl }}img/sirsidynix-logo.png" alt="SirsiDynix logo">
-            <img src="{{ site.baseurl }}img/innovate-polaris-logo.png" alt="Innovate Polaris logo">
-            <img src="{{ site.baseurl }}img/ezproxy-logo.png" alt="EZproxy logo">
+            <!-- <p>Version specific Logos for Sirsi products + Polaris Logo. EZProxy</p> -->
+
+            <div class="feature-row">
+              <div class="feature-card">
+                <img src="{{ site.baseurl }}img/sirsidynix-logo.svg" alt="SirsiDynix logo">
+              </div>
+              <div class="feature-card">
+                <img src="{{ site.baseurl }}img/innovate-polaris-logo.png" alt="Innovate Polaris logo">
+              </div>
+            </div>
+            <div class="feature-row">
+              <div class="feature-card">
+                <img src="{{ site.baseurl }}img/ezproxy-logo.png" alt="EZproxy logo">
+              </div>
+            </div>
 
             <h3>My Account</h3>
             <p>Patrons can view fines, view items out, renew items out, view hold requests, cancel hold requests and manage their Wishlist</p>
-            <p>Maybe use Stacks icons for these things instead of logos to keep the format consistent</p>
+            <!-- <p>Maybe use Stacks icons for these things instead of logos to keep the format consistent</p> -->
             <img src="{{ site.baseurl }}img/stacks-logo.png" alt="stacks logo">
           </div>
         </li>
 
         <li id="portal" data-content="portal">
           <div>
-            <h2>Database Portal</h2>
+            <!-- <h2>Database Portal</h2> -->
             <h3>Access</h3>
             <p>Patrons can access all your databases in the same interface they search your physical and digital catalogues. Seamless single sign-on means direct access to all their favorite resources using EZproxy.</p>
-            <p>Let's show a few DB icons: (westlocklibrary.ca uses TRAC test user and their EZProxy links)</p>
-            <img src="{{ site.baseurl }}img/ebsco-host-logo.png" alt="Ebsco Host logo">
-            <img src="{{ site.baseurl }}img/zinio-logo.png" alt="Zinio logo">
-            <img src="{{ site.baseurl }}img/tumblebook-logo.png" alt="TumbleBook logo">
+            <!-- <p>Let's show a few DB icons: (westlocklibrary.ca uses TRAC test user and their EZProxy links)</p> -->
+
+            <div class="feature-row">
+              <div class="feature-card">
+                <img src="{{ site.baseurl }}img/ebsco-host-logo.png" alt="Ebsco Host logo">
+              </div>
+              <div class="feature-card">
+                <img src="{{ site.baseurl }}img/zinio-logo.png" alt="Zinio logo">
+              </div>
+            </div>
+            <div class="feature-row">
+              <div class="feature-card">
+                <img src="{{ site.baseurl }}img/tumblebook-logo.png" alt="TumbleBook logo">
+              </div>
+            </div>
           </div>
         </li>
 
         <li id="cms" data-content="cms">
           <div>
-            <h2>Website CMS</h2>
+            <!-- <h2>Website CMS</h2> -->
             <div class="feature-row">
               <div class="feature-card">
                 <h3 class="theme">Customizable themes</h3>
                 <p>Easy-to-use drag-and-drop responsive layouts with color theme selectors</p>
-                <!-- <img src="{{ site.baseurl }}img/fi-book.svg" alt=""> -->
+                <!-- <img src="{{ site.baseurl }}img/fi-paint-bucket.svg" alt=""> -->
               </div>
               <div class="feature-card">
                 <h3 class="location">Location &#38; Hours</h3>
