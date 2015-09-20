@@ -84,7 +84,7 @@ gulp.task('uncss', function () {
  */
 gulp.task('watch', function () {
   gulp.watch('_scss/**/*.scss', ['sass']);
-  gulp.watch(['*.html', '*.md', '_layouts/*.html', '_pages/*.html', '_includes/*.html', '_posts/*', 'js/*.js'], ['jekyll-rebuild']);
+  gulp.watch(['*.html', '*.md', '_layouts/*.html', ' img/*.*', '_pages/*.html', '_includes/*.html', '_posts/*', 'js/*.js'], ['jekyll-rebuild']);
 });
 
 
