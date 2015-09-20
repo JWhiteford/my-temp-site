@@ -58,6 +58,8 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('css'));
 });
 
+
+// !!! NOT WORKINGNG IN WATCH YET !!!
 // Concatenate js files
 gulp.task('scripts', function() {
   return gulp.src(['js/tabs.js','js/animated-page.js'])
