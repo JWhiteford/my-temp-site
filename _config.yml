@@ -16,6 +16,7 @@ url: http://www.hfstacks.com
 markdown: kramdown
 highlighter: pygments # or rouge or null
 
+# kramdown settings - remove auto id's from headings
 kramdown:
   auto_ids: false
 

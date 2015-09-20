@@ -1,0 +1,51 @@
+#cms {
+
+ h3 {
+  padding-left: 2rem;
+
+    &.theme::before {
+      background-image: url(../img/fi-book.svg);
+    }
+    &.location::before {
+      background-image: url(../img/fi-marker.svg);
+    }
+    &.events::before {
+      background-image: url(../img/fi-calendar.svg);
+    }
+    &.social::before {
+      background-image: url(../img/fi-share.svg);
+    }
+    &.history::before {
+      background-image: url(../img/fi-clock.svg);
+    }
+    &.news::before {
+      background-image: url(../img/fi-mail.svg);
+    }
+    &.book-list::before {
+      background-image: url(../img/fi-book.svg);
+    }
+    &.forms::before {
+      background-image: url(../img/fi-clipboard-pencil.svg);
+    }
+    &.static::before {
+      background-image: url(../img/fi-page.svg);
+    }
+    &.dynamic::before {
+      background-image: url(../img/fi-page-search.svg);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      color: $primary-color;
+      fill: $primary-color;
+      filter: hue-rotate(220deg) saturate(5);
+      background-repeat: no-repeat;
+      height: 1.65rem;
+      width: 1.65rem;
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin-left: -2.25rem;
+    }
+  }
+}

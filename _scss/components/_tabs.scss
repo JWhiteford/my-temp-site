@@ -182,7 +182,7 @@
       width: $tabs-btn-width-L;
       text-align: left;
       @include font-size(14px);
-      padding: 0 2.8em 0 4.6em;
+      padding: 0 2em;
 
       &.selected {
         box-shadow: inset 0 2px 0 $color-2;
@@ -199,10 +199,12 @@
 }
 
 .cd-tabs-content {
+  padding: 0;
+  margin: 0;
 
   li {
     display: none;
-    padding: 1.4em;
+    // padding: 1.4em;
 
 
     &.selected {
