@@ -39,16 +39,38 @@ body {
   }
 
   &.public {
-    background: linear-gradient(rgba($main-color, .8), rgba($main-color, .8)), url($bg-1) no-repeat;
-    background-size: cover;
+    position: relative;
+    z-index: 1;
+
+    &::after {
+      content: '';
+      background: linear-gradient(rgba($main-color, .8), rgba($main-color, .8)), url($bg-1) no-repeat;
+      background-size: cover;
+      opacity: .5;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      z-index: -1;
+    }
   }
 }
 
 .section--content {
-  padding: ($body-padding/2);
   // border: 1px solid $border-color;
+  padding: ($body-padding/2) 0;
 
-  @include MQ(M) {
+  .public & {
+    padding: ($body-padding/2);
+    box-shadow: 0 5px 10px -3px rgba($black, .5);
+
+    @include MQ(M ){
+      box-shadow: none;
+    }
+  }
+
+  @include MQ(L) {
     padding: initial;
     @include center;
 
@@ -61,6 +83,14 @@ body {
     p {
       padding-right: $body-padding;
       padding-left: $body-padding;
+    }
+  }
+
+  @include MQ(M) {
+    .right & {
+      padding: ($body-padding/2);
+      width: 90%;
+      margin: auto;
     }
   }
 }

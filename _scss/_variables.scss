@@ -3,7 +3,7 @@ $site-border:     $body-padding;
 
 $body-color: #f7f7f7;
 
-
+$stacks-logo-green: #69BD45;
 
 // colors
 $black:             #000;
@@ -12,7 +12,8 @@ $white:             #fff;
 
 $neon:              #a7e63a;
 
-$color-1:           #407A95;
+// $color-1:           #407A95;
+$color-1:           $stacks-logo-green;
 $color-2:           #f7f7f7;
 // $color-2: #982b3c; // Stiletto
 $color-3: #979c9c; // Pewter
@@ -20,8 +21,10 @@ $color-4: #338899; // Astral
 $color-5: #ffffff; // White
 
 // We use these as default colors throughout
-$primary-color:     #358399;
+$primary-color:     $color-1;
 $secondary-color:   #c4c4c4;
+// $primary-color:     #358399;
+// $secondary-color:   #c4c4c4;
 
 // testing of images & color combos
 $bg-1:          "../img/1.jpg";

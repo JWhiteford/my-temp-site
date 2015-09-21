@@ -40,14 +40,14 @@ sitemap:
     </a>
   </li>
   <li>
-    <a href="/public-library-software" data-type="page-transition">
+    <a>
       <span class="block--centered">
         <span class="vertical--title">
           <h1>Hospitals</h1>
         </span>
         <span class="vertical--desc">
           <p>A rich EBSCO Discovery Interface that real people want to use! Improve your decision making and performance by providing access to knowledge resources on any device, anywhere.</p>
-          <span class="btn--fake">read more</span>
+          <span class="btn--fake">coming soon</span>
         </span>
       </span>
     </a>
