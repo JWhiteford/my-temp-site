@@ -1,6 +1,6 @@
 ---
-title: Lorem ipsum dolor adipisicing elit.
-description:
+title: One Search, One Library | Stacks Library Software
+description: Stacks allows searching and browsing of your programs, events and location within the same interface that they access your online catalog with full ILS Integration.
 permalink:
 
 class:

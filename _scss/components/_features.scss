@@ -400,7 +400,15 @@ Javascript disabled
   }
 }
 
+.feature--group {
+  // box-shadow: 0 1px 3px -1px rgba($black, 0.15);
+  overflow: auto;
 
+  &:nth-of-type(2) {
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+  }
+}
 // cards
 .feature-row {
   display: block;
@@ -424,6 +432,12 @@ Javascript disabled
     &:nth-child(2n) {
       padding-left: 1rem;
     }
+  }
+
+  img {
+    display: block;
+    text-align: center;
+    margin: auto;
   }
 }
 

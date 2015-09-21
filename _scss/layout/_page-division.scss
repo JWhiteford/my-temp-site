@@ -77,12 +77,25 @@ body {
     &.full--width {
       // width: calc(100% - #{$body-padding * 2});
       width: 100%;
+      box-sizing: border-box;
+      text-align: center;
     }
 
     h1, h2, h3, h4, h5, h6,
-    p {
+    p, small {
       padding-right: $body-padding;
       padding-left: $body-padding;
+    }
+
+    &.cms {
+      h1, h2, h3, h4, h5, h6,
+      p {
+        padding-left: initial;
+        padding-right: initial;
+      }
+      p {
+        font-size: .85rem;
+      }
     }
   }
 
@@ -119,9 +132,9 @@ body {
   // overflow: hidden;
   // margin-right: -$body-padding;
 
-  @include MQ(M) {
-    transform: translateX(0) translateY(-2rem);
-  }
+  // @include MQ(M) {
+  //   transform: translateX(0) translateY(-2rem);
+  // }
   .section--content {
     padding: 0;
   }

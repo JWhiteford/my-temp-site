@@ -60,11 +60,10 @@
 }
 
 .icon-col {
-  display: block;
-  width: 8%;
-  float: left;
-  margin-right: 2%;
   border-radius: 50%;
+  max-width: 5%;
+  margin-top: 1rem;
+  float: right;
 
   img {
     max-width: 100%;
@@ -72,10 +71,26 @@
     border-radius: 100%;
     padding: 20%;
   }
+
+  @include MQ(M) {
+    margin-right: 2%;
+    display: block;
+    width: 8%;
+    float: left;
+    margin-top: 0;
+    max-width: 100%;
+  }
 }
 
 .feature-desc {
-  width: 85%;
-  padding-left: 5%;
-  float: right;
+  border-bottom: 1px solid $border-color;
+  padding: 1rem 0;
+
+  @include MQ(M) {
+    width: 85%;
+    padding-left: 5%;
+    float: right;
+    border-bottom: none;
+    padding-bottom: initial;
+  }
 }
