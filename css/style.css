@@ -85,6 +85,22 @@ body {
     position: absolute;
     z-index: -1; }
 
+.page--half.academic {
+  position: relative;
+  z-index: 1; }
+  .page--half.academic::after {
+    content: '';
+    background: -webkit-linear-gradient(rgba(0, 151, 134, 0.8), rgba(0, 151, 134, 0.8)), url("../img/2.jpg") no-repeat;
+    background: linear-gradient(rgba(0, 151, 134, 0.8), rgba(0, 151, 134, 0.8)), url("../img/2.jpg") no-repeat;
+    background-size: cover;
+    opacity: .5;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1; }
+
 .section--content {
   padding: 1.5rem 0; }
   .public .section--content {
@@ -1149,6 +1165,120 @@ Javascript disabled
       float: right;
       border-bottom: none;
       padding-bottom: initial; } }
+
+/* Force Hardware Acceleration */
+body::after, body::before, .cd-loading-bar, .cd-loading-bar::before {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  -webkit-transition: -webkit-transform 0.4s 0.4s;
+          transition: transform 0.4s 0.4s; }
+
+body::after, body::before {
+  /* these are the 2 half blocks which cover the content once the animation is triggered */
+  content: '';
+  height: 50vh;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  background-color: #fff;
+  z-index: 1; }
+
+body::before {
+  top: 0;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%); }
+
+body::after {
+  bottom: 0;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%); }
+
+body.page-is-changing::after, body.page-is-changing::before {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: -webkit-transform 0.4s 0s;
+          transition: transform 0.4s 0s; }
+
+.cd-cover-layer {
+  /* layer that covers the content when the animation is triggered */
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  height: calc(100% - 20px);
+  width: calc(100% - 20px);
+  opacity: 0;
+  visibility: hidden;
+  background-color: #4089a6;
+  -webkit-transition: opacity 0.4s 0.4s, visibility 0s 0.8s;
+          transition: opacity 0.4s 0.4s, visibility 0s 0.8s; }
+  .page-is-changing .cd-cover-layer {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
+            transition: opacity 0.3s 0s, visibility 0s 0s; }
+
+@media only screen and (min-width: 768px) {
+  .cd-cover-layer {
+    height: calc(100% - 40px);
+    width: calc(100% - 40px); } }
+
+.cd-loading-bar {
+  /* this is the loding bar - visible while switching from one page to the following one */
+  position: fixed;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  height: 2px;
+  width: 90%;
+  background-color: #4089a6;
+  visibility: hidden;
+  -webkit-transition: visibility 0s 0.4s, -webkit-transform 0.4s 0s ease-in;
+          transition: visibility 0s 0.4s, transform 0.4s 0s ease-in; }
+
+.cd-about .cd-loading-bar {
+  background-color: #283040; }
+
+.cd-about .cd-loading-bar::before {
+  background-color: #4089a6; }
+
+.cd-loading-bar::before {
+  /* this is the progress bar inside the loading bar */
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #283040; }
+
+.page-is-changing .cd-loading-bar {
+  visibility: visible;
+  -webkit-transform: translateX(-50%) translateY(-50%) scaleX(0.3);
+      -ms-transform: translateX(-50%) translateY(-50%) scaleX(0.3);
+          transform: translateX(-50%) translateY(-50%) scaleX(0.3);
+  -webkit-transition: visibility 0s 0.3s, -webkit-transform 0.4s 0.4s;
+          transition: visibility 0s 0.3s, transform 0.4s 0.4s; }
+
+.page-is-changing .cd-loading-bar::before {
+  -webkit-transform: scaleX(1);
+      -ms-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transition: -webkit-transform 0.8s 0.8s ease-in;
+          transition: transform 0.8s 0.8s ease-in; }
+
+@media only screen and (min-width: 768px) {
+  .cd-loading-bar {
+    width: calc(100% - 40px); } }
 
 #__bs_notify__ {
   bottom: 0;

@@ -14,7 +14,7 @@ sitemap:
 
 <ul class="vertical--columns">
   <li>
-    <a href="/test" data-type="page-transition">
+    <a href="/public-library" data-type="page-transition">
       <span class="block--centered">
         <span class="vertical--title">
           <h1>Public Libraries</h1>
@@ -27,7 +27,7 @@ sitemap:
     </a>
   </li>
   <li>
-    <a href="/public-library-software" data-type="page-transition">
+    <a href="/academic-library" data-type="page-transition">
       <span class="block--centered">
         <span class="vertical--title">
           <h1>Academic Libraries</h1>

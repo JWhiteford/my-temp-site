@@ -1,7 +1,7 @@
 ---
 title: One Search, One Library | Stacks Library Software
 description: Stacks allows searching and browsing of your programs, events and location within the same interface that they access your online catalog with full ILS Integration.
-permalink: /tabs/
+permalink: /academic-library/
 
 class:
 
@@ -13,10 +13,10 @@ sitemap:
 ---
 
 <div class="page--full">
-  <div class="page--half public">
+  <div class="page--half academic">
     <div class="section--content full--width">
     <p><img src="{{ site.baseurl }}img/stacks-logo.png" alt="Stacks logo"></p>
-      <h1>Public Library Features</h1>
+      <h1>Academic Library Features</h1>
       <ul class="tabs-menu list-double">
         <li class="current"><a class="btn" href="#responsive">responsive</a></li>
         <li><a class="btn" href="#disc">discovery</a></li>
@@ -28,11 +28,5 @@ sitemap:
     </div>
   </div>
 
-  <div class="page--half right tab">
-    {% include responsive.html %}
-    {% include discovery.html %}
-    {% include ils.html %}
-    {% include database.html %}
-    {% include cms.html %}
-  </div>
+  {% include all-features.html %}
 </div>

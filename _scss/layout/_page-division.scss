@@ -55,6 +55,24 @@ body {
       z-index: -1;
     }
   }
+
+  &.academic {
+    position: relative;
+    z-index: 1;
+
+    &::after {
+      content: '';
+      background: linear-gradient(rgba($clr-2, .8), rgba($clr-2, .8)), url($bg-2) no-repeat;
+      background-size: cover;
+      opacity: .5;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      z-index: -1;
+    }
+  }
 }
 
 .section--content {
