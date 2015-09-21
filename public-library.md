@@ -15,7 +15,7 @@ sitemap:
 <div class="page--full">
   <div class="page--half public">
     <div class="section--content full--width">
-    <p><img src="{{ site.baseurl }}img/stacks-logo.png" alt="Stacks logo"></p>
+      <p><img src="{{ site.baseurl }}img/stacks-logo.png" alt="Stacks logo"></p>
       <h1>Public Library Features</h1>
       <ul class="tabs-menu list-double">
         <li class="current"><a class="btn" href="#responsive">responsive</a></li>
