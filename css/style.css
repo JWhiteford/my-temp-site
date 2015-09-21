@@ -175,7 +175,7 @@ footer {
   footer ul {
     list-style: none;
     padding: 0;
-    opacity: .25; }
+    opacity: .75; }
   footer li {
     display: inline-block;
     padding: 0 1rem; }
@@ -246,7 +246,7 @@ footer {
       background-image: url(../img/7.jpg); }
     @media (min-width: 768px) {
       .vertical--columns li {
-        opacity: .2;
+        opacity: .35;
         -webkit-transition: opacity 0.3s;
                 transition: opacity 0.3s; } }
     .vertical--columns li:hover {
@@ -368,6 +368,12 @@ footer {
       .vertical--desc p {
         margin-bottom: 50px;
         color: #fff; } }
+
+li.disabled:hover {
+  cursor: not-allowed; }
+  li.disabled:hover .btn--fake:hover {
+    background: transparent;
+    color: #407A95; }
 
 a.home--link {
   position: relative;

@@ -13,7 +13,7 @@ sitemap:
 ---
 
 <ul class="vertical--columns">
-  <li>
+  <li class="vert-public">
     <a href="/public-library" data-type="page-transition">
       <span class="block--centered">
         <span class="vertical--title">
@@ -26,7 +26,7 @@ sitemap:
       </span>
     </a>
   </li>
-  <li>
+  <li class="vert-academic">
     <a href="/academic-library" data-type="page-transition">
       <span class="block--centered">
         <span class="vertical--title">
@@ -39,8 +39,8 @@ sitemap:
       </span>
     </a>
   </li>
-  <li>
-    <a href="/thanks" data-type="page-transition">
+  <li class="vert-hospital disabled">
+    <a>
       <span class="block--centered">
         <span class="vertical--title">
           <h1>Hospitals</h1>
