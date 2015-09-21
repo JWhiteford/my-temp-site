@@ -40,7 +40,7 @@ sitemap:
     </a>
   </li>
   <li>
-    <a>
+    <a href="/thanks" data-type="page-transition">
       <span class="block--centered">
         <span class="vertical--title">
           <h1>Hospitals</h1>
