@@ -1115,14 +1115,6 @@ Javascript disabled
     white-space: nowrap; }
     .tabs-menu.list-double li.current a {
       background-color: #fff; }
-    .tabs-menu.list-double li a {
-      color: #fff;
-      padding: 1rem 2rem;
-      text-decoration: none;
-      background-color: #407A95;
-      border-radius: 5rem; }
-      .tabs-menu.list-double li a:hover {
-        background: #5396b5; }
 
 .tab-content {
   width: 100%;
@@ -1130,6 +1122,15 @@ Javascript disabled
 
 .selected {
   display: block; }
+
+.feature--btn {
+  color: #fff;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border: 2px solid #407A95;
+  background: transparent; }
+  .feature--btn:hover {
+    background: #5396b5; }
 
 #cms h3 {
   margin-top: 0;

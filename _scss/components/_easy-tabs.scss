@@ -15,18 +15,6 @@
         background-color: $white;
       }
     }
-
-    a {
-      color: $white;
-      padding: 1rem 2rem;
-      text-decoration: none;
-      background-color: $color-1;
-      border-radius: 5rem;
-
-      &:hover {
-        background: lighten($color-1, 10%);
-      }
-    }
   }
 }
 
@@ -38,4 +26,16 @@
 
 .selected {
   display: block;
+}
+
+.feature--btn {
+  color: $white;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border: 2px solid $color-1;
+  background: transparent;
+
+  &:hover {
+    background: lighten($color-1, 10%);
+  }
 }
