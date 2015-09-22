@@ -10,36 +10,38 @@
     display: block;
     font-size: initial; // add font size back for spacing
     box-sizing: border-box;
-    width: 50%;
     float: left;
     white-space: nowrap;
+
+    @include MQ(SO) {
+      width: 50%;
+    }
 
     &:last-of-type {
       display: block;
       width: 100%;
 
       @include MQ(M) {
-        width: initial;
         display: inline-block;
+        width: initial;
       }
     }
 
     @include MQ(M) {
-      width: initial;
       float: none;
       display: inline-block;
       margin-left: -2px;
-      box-shadow: 0 1px 3px 0 rgba($black, 0.14);
-      border-radius: 2px;
       // width: initial;
       // list-style: none;
       // padding-left: 0;
       // float: left;
       // border: 0;
       // white-space: nowrap;
-
       &.current {
-
+      }
+      @include MQ(L) {
+        // box-shadow: 0 1px 3px 0 rgba($black, 0.14);
+        border-radius: 2px;
       }
     }
   }
@@ -66,6 +68,9 @@
   line-height: 2rem;
 
   @include MQ(M) {
+    display: block;
+  }
+  @include MQ(L) {
     display: inline-block;
   }
 

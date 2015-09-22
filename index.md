@@ -14,8 +14,8 @@ sitemap:
 
 <ul class="vertical--columns">
   <li class="vert-public">
-    <a href="public-library" data-type="page-transition" class="btn_nav">
-      <span class="block--centered">
+    <a href="public-library" data-type="page-transition">
+      <span class="block--centered navigation__cattext">
         <span class="vertical--title">
           <h1>Public Libraries</h1>
         </span>
@@ -27,8 +27,8 @@ sitemap:
     </a>
   </li>
   <li class="vert-academic">
-    <a href="academic-library" data-type="page-transition" class="btn_nav">
-      <span class="block--centered">
+    <a href="academic-library" data-type="page-transition">
+      <span class="block--centered navigation__cattext">
         <span class="vertical--title">
           <h1>Academic Libraries</h1>
         </span>
@@ -39,9 +39,9 @@ sitemap:
       </span>
     </a>
   </li>
-  <li class="vert-hospital disabled">
+  <li class="vert-hospital disabled" title="coming soon">
     <a>
-      <span class="block--centered">
+      <span class="block--centered navigation__cattext">
         <span class="vertical--title">
           <h1>Hospitals</h1>
         </span>
