@@ -1,25 +1,29 @@
-.tabs-menu.list-double {
-  clear: both;
+.tabs-menu {
+  width: 100%;
+  text-align: center;
+  padding-left: 0;
+  font-size: 0; // remove space between li
+  // overflow: initial;
 
   li {
-    width: initial;
-    list-style: none;
-    padding-left: 0;
-    float: left;
-    border: 0;
-    white-space: nowrap;
+    display: inline-block;
+    font-size: initial; // add font size back for spacing
+    margin-left: -2px;
+    box-shadow: 0 1px 3px 0 rgba($black, 0.14);
+    border-radius: 2px;
+    // width: initial;
+    // list-style: none;
+    // padding-left: 0;
+    // float: left;
+    // border: 0;
+    // white-space: nowrap;
 
     &.current {
-
-      a {
-        background-color: $white;
-      }
     }
   }
 }
 
 .tab-content {
-  // display: block;
   width: 100%;
   display: none;
 }
@@ -30,12 +34,22 @@
 
 .feature--btn {
   color: $white;
-  padding: 1rem 2rem;
+  padding: .75rem 1.5rem;
+  // text-transform: capitalize;
   text-decoration: none;
-  border: 2px solid $color-1;
-  background: transparent;
+  border: 2px solid transparent;
+  background: $button-color;
+  display: inline-block;
+  // margin-bottom: 5px;
+  line-height: 2rem;
 
   &:hover {
-    background: lighten($color-1, 10%);
+    background: lighten($public, 10%);
+  }
+}
+
+.academic {
+  .feature--btn:hover {
+    background: lighten($academic, 10%);
   }
 }

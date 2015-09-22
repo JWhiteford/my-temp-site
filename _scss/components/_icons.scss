@@ -54,7 +54,7 @@
 #cms {
 
   h3 {
-    margin-top: 0;
+    // margin-top: 0;
     margin-bottom: 0;
   }
 }
@@ -84,7 +84,7 @@
 
 .feature-desc {
   border-bottom: 1px solid $border-color;
-  padding: 1rem 0;
+  padding: 0 0 1rem 0;
 
   @include MQ(M) {
     width: 85%;
