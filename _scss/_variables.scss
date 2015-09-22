@@ -24,10 +24,11 @@ $stacks-logo-green: #69BD45;
 
 
 $color-1:           #358399;
-$color-2:           #009786;  // this was color-2
-$color-3:           #979c9c; // Pewter
-$color-4:           #338899; // Astral
-$color-5:           $white; // White
+$color-2:           #009786;
+$color-3:           #a3b4a2;
+$color-4:           #364652;
+$color-5:           #1f2421;
+$color-6:           #2589bd;
 
 // We use these as default colors throughout
 $primary-color:     $color-1;
@@ -50,6 +51,9 @@ $tabs-btn-height-L: 60px;   // tab buttons height on large devices
 $tabs-btn-width-L: auto;  // tab button width on large devices
 
 // verticals
-$public:      $color-1;
-$academic:    $color-2; // should be #009786
-$hospital:    $color-3;
+$public:        $color-1;
+$academic:      $color-2;
+$hospital:      $color-3;
+$bg-public:     $bg-1;
+$bg-academic:   $bg-2;
+$bg-hospital:   $bg-3;

@@ -155,8 +155,11 @@ header {
       width: 100%;
       display: block;
       text-align: center;
-      margin: 3rem auto 0;
+      margin: 1.5rem auto 0;
       z-index: 20; } }
+  @media (min-width: 1170px) {
+    header {
+      margin: 3rem auto 0; } }
 
 footer {
   font-size: .75rem;
@@ -165,18 +168,20 @@ footer {
   display: block;
   text-align: center;
   bottom: 0;
-  margin: 3rem auto 0;
+  margin: 0 auto 3rem;
   z-index: 20;
   width: 100%; }
   @media (min-width: 768px) {
+    footer {
+      margin-bottom: 0; } }
+  @media (min-width: 1170px) {
     footer {
       margin-bottom: 3rem; } }
   footer h2 {
     opacity: .5; }
   footer ul {
     list-style: none;
-    padding: 0;
-    opacity: .75; }
+    padding: 0; }
   footer li {
     display: inline-block;
     padding: 0 1rem; }
@@ -215,6 +220,18 @@ footer {
       .verticals h1 {
         font-size: 2rem; } }
 
+.vertical--columns li.vert-public::after, .vertical--columns li.vert-academic::after, .vertical--columns li.vert-hospital::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+  opacity: .2; }
+
 .vertical--columns {
   font-size: 0;
   letter-spacing: normal;
@@ -239,22 +256,23 @@ footer {
             transition-delay: .2s;
     background: rgba(53, 131, 153, 0.6);
     box-sizing: border-box; }
-    .vertical--columns li .vert-public {
+    .vertical--columns li.vert-public,
+    .vertical--columns li.vert-academic,
+    .vertical--columns li.vert-hospital {
       position: relative;
       z-index: 0; }
-      .vertical--columns li .vert-public::after {
-        background-image: url(../img/5.jpg); }
-    .vertical--columns li:nth-of-type(2n) {
-      background-image: url(../img/6.jpg); }
-    .vertical--columns li:nth-of-type(3n) {
-      background-image: url(../img/7.jpg); }
+    .vertical--columns li.vert-public::after {
+      background-image: url(../img/1.jpg); }
+    .vertical--columns li.vert-academic::after {
+      background-image: url(../img/2.jpg); }
+    .vertical--columns li.vert-hospital::after {
+      background-image: url(../img/3.jpg); }
     @media (min-width: 768px) {
-      .vertical--columns li {
-        opacity: .35;
-        -webkit-transition: opacity 0.3s;
-                transition: opacity 0.3s; } }
-    .vertical--columns li:hover {
-      opacity: 1; }
+      .vertical--columns li.vert-public {
+        width: 100%; } }
+    @media (min-width: 1170px) {
+      .vertical--columns li.vert-public {
+        width: 33.3333%; } }
     @media (min-width: 768px) {
       .vertical--columns li {
         width: 50%;
@@ -327,13 +345,13 @@ footer {
         height: initial;
         -webkit-transition-delay: .3;
                 transition-delay: .3;
-        -webkit-transform: translateY(0);
-            -ms-transform: translateY(0);
-                transform: translateY(0); }
+        -webkit-transform: translateY(3rem);
+            -ms-transform: translateY(3rem);
+                transform: translateY(3rem); }
       .vertical--columns a:hover .vertical--title {
-        -webkit-transform: translateY(-4rem);
-            -ms-transform: translateY(-4rem);
-                transform: translateY(-4rem); }
+        -webkit-transform: translateY(5rem);
+            -ms-transform: translateY(5rem);
+                transform: translateY(5rem); }
       .vertical--columns a:hover::after {
         -webkit-transform: scale(0);
             -ms-transform: scale(0);
@@ -378,6 +396,11 @@ li.disabled:hover {
   li.disabled:hover .btn--fake:hover {
     background: transparent;
     color: #358399; }
+
+.vertical--columns .vert-academic a:hover .vertical--title {
+  -webkit-transform: translateY(0rem);
+      -ms-transform: translateY(0rem);
+          transform: translateY(0rem); }
 
 a.home--link {
   position: relative;
@@ -823,7 +846,7 @@ Content block
     height: 100%;
     padding: 2em;
     overflow-y: scroll;
-    background-color: #fff;
+    background-color: #1f2421;
     opacity: 0;
     visibility: hidden; }
     .cd-content-block > ul > li.is-selected {
@@ -1003,7 +1026,7 @@ Slider navigation
         display: block;
         height: 100%;
         width: 100%;
-        color: #fff;
+        color: #1f2421;
         border: none;
         font-size: 1.25rem;
         background: transparent;

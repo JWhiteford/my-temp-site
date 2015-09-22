@@ -6,10 +6,14 @@ header {
     width: 100%;
     display: block;
     text-align: center;
-    margin: $site-border auto 0;
+    margin: #{$site-border/2} auto 0;
     z-index: 20;
   }
+  @include MQ(L) {
+    margin: $site-border auto 0;
+  }
 }
+
 footer {
   font-size: .75rem;
   color: $white;
@@ -17,13 +21,16 @@ footer {
   display: block;
   text-align: center;
   bottom: 0;
-  margin: $site-border auto 0;
+  margin: 0 auto $site-border;
   z-index: 20;
   // width: calc(100% - #{$site-border});
   width: 100%;
 
   @include MQ(M) {
     // width: 100%;
+    margin-bottom: 0;
+  }
+  @include MQ(L) {
     margin-bottom: $site-border;
   }
 
@@ -34,8 +41,9 @@ footer {
   ul {
     list-style: none;
     padding: 0;
-    opacity: .75;
+    // opacity: .75;
   }
+
   li {
     display: inline-block;
     padding: 0 1rem;
@@ -53,7 +61,7 @@ footer {
 
 .verticals {
   height: calc(100vh - #{$site-border * 2});
-  background: $color-1;
+  background: $primary-color;
   position: relative;
 
   @include MQ(M) {
@@ -67,29 +75,6 @@ footer {
     width: calc(100vw - #{$site-border * 2});
     transition-delay: .5s;
   }
-  // @include MQ(M) {
-  //   border: $site-border solid $white;
-  // }
-
-  // &::after {
-  //   // z-index: 1;
-  //   // top: 0;
-  //   // left: 0;
-  //   width: 100%;
-  //   height: 100%;
-  //   transition-property: transform;
-  //   transition-delay: .1s;
-  //   transition-duration: .3s;
-  //   transform: scale(1);
-
-  //   @include MQ(S) {
-  //     position: absolute;
-  //   }
-
-  //   @include MQ(M) {
-  //     position: fixed;
-  //   }
-  // }
 
   h1 {
     color: $white;
@@ -104,18 +89,19 @@ footer {
   }
 }
 
-
 // ul list items
 // use if there is an extra span used to place image
 %bg-placer {
+  content: '';
   position: absolute;
-  z-index: 2;
+  z-index: -1;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-position: center center;
   background-size: cover;
+  opacity: .2;
 }
 .vertical--columns {
   font-size: 0;
@@ -137,74 +123,47 @@ footer {
     transition-duration: .3s;
     transition-property: transform;
     transition-delay: .2s;
-    background: rgba($main-color, 0.6);
+    background: rgba($primary-color, 0.6);
     box-sizing: border-box;
 
-
-    // &::after {
-    //   content: '';
-    //   display: block;
-    //   // position: absolute;
-    //   left: 0;
-    //   top: 0;
-    //   bottom: 0;
-    //   width: 100%;
-    //   height: 100%;
-    //   z-index: 1;
-    //   opacity: 0.6;
-    //   background-repeat: no-repeat;
-    //   background-position: 50% 0;
-    //   background-size: cover;
-    // }
-
-    // &:first-of-type {
-    //   &::after {
-    //     background-image: url(../img/5.jpg);
-    //   }
-    // }
-
-    // &:nth-of-type(2n) {
-    //   &::after {
-    //     background-image: url(../img/6.jpg);
-    //   }
-    // }
-
-    // &:nth-of-type(3n) {
-    //   &::after {
-    //     background-image: url(../img/7.jpg);
-    //   }
-    // }
-
-    .vert-public {
+    &.vert-public,
+    &.vert-academic,
+    &.vert-hospital {
       position: relative;
       z-index: 0;
+    }
+
+    &.vert-public {
+      // background-color: $public;
 
       &::after {
-        background-image: url(../img/5.jpg);
+        @extend %bg-placer;
+        background-image: url(#{$bg-public});
       }
-
+    }
+    &.vert-academic {
+      // background-color: $academic;
+      &::after {
+        @extend %bg-placer;
+        background-image: url(#{$bg-academic});
+      }
+    }
+    &.vert-hospital {
+      // background-color: $hospital;
+      &::after {
+        @extend %bg-placer;
+        background-image: url(#{$bg-hospital});
+      }
     }
 
-    // &:first-of-type {
-    //   background-image: url(../img/5.jpg);
-    // }
-
-    &:nth-of-type(2n) {
-      background-image: url(../img/6.jpg);
-    }
-
-    &:nth-of-type(3n) {
-      background-image: url(../img/7.jpg);
-    }
-
-
-    @include MQ(M) {
-      opacity: .35;
-      transition: opacity .3s;
-    }
-
-    &:hover {
-      opacity: 1;
+    // On mobile have public take up full width
+    &.vert-public {
+      @include MQ(M) {
+        width: 100%;
+      }
+      @include MQ(L) {
+        width: 33.3333%
+      }
     }
 
     @include MQ(M) {
@@ -218,7 +177,6 @@ footer {
     }
   }
 }
-
 
 
 // fake buttons to look like buttons but not act as links
@@ -242,35 +200,6 @@ footer {
 }
 
 
-
-// @media (max-width:1023px) {
-//   .verticals {
-//     top: 60px;
-//     height: calc(100% - 60px);
-//     padding-left: 0;
-//   }
-// }
-
-// h1 {
-//   color: $white;
-//   line-height: 1;
-//   @include MQ(S) {
-//     font-size: 1.5rem;
-//     position: relative;
-//     // top: 5px;
-//   }
-
-//   @include MQ(M) {
-//     font-size: 3rem;
-//   }
-
-//   @include MQ(L) {
-//     font-size: 4rem;
-//   }
-// }
-
-
-
 .vertical--title {
   position: relative;
   display: block;
@@ -281,6 +210,7 @@ footer {
     transform: translateY(0);
   }
 }
+
 
 .vertical--columns {
 
@@ -315,6 +245,11 @@ footer {
       transition: background-color .3s;
     }
 
+// TO-DO fix bottom two verticals on media query medium so the text is nicer aligned on hover
+
+// .vertical--columns .vert-academic a:hover .vertical--title {
+//   transform: translateY(0rem)
+// }
     &:hover {
 
       @include MQ(M) {
@@ -325,11 +260,11 @@ footer {
           overflow: hidden;
           height: initial;
           transition-delay: .3;
-          transform: translateY(0);
+          transform: translateY(3rem);
         }
 
         .vertical--title {
-          transform: translateY(-4rem);
+          transform: translateY(5rem);
         }
 
         &::after {
@@ -352,24 +287,6 @@ footer {
   position: relative;
   z-index: 5;
   max-width: 90%;
-
-  // @include MQ(S) {
-  //   font-size: 0;
-  //   height: 100%;
-  //   text-align: center;
-
-  //   &::before {
-  //     display: inline-block;
-  //     height: 100%;
-  //     content: "";
-  //     vertical-align: middle;
-  //   }
-
-  //   & > * {
-  //     display: inline-block;
-  //     vertical-align: middle;
-  //   }
-  // }
 }
 
 .vertical--desc {
@@ -393,85 +310,6 @@ footer {
 }
 
 
-// override pages
-// .not-front .verticals {
-//   background: $body-bg;
-//   padding: 0;
-
-
-//   // h1 {
-//   //   color: $body-font-color;
-//   // }
-
-// }
-
-// .half--page {
-//   background: linear-gradient(rgba($main-color, .8), rgba($main-color, .8)), url(../img/1.jpg) no-repeat;
-//   background-size: cover;
-//   color: $white;
-
-//   @include MQ(S) {
-//     width: 100%;
-//     display: block;
-//   }
-
-//   @include MQ(M) {
-//     // height is calculated with $site-border * 2
-//     height: calc(100vh - 6rem) !important;
-//     width: 50%;
-//     position: absolute;
-//     top: 0;
-//   }
-// }
-
-// .video--frame {
-//   width: 100%;
-//   display: block;
-
-//   @include MQ(M) {
-//     // height: calc(50vh - 3rem) !important;
-//     position: absolute;
-//     top: 0;
-//     right: 0;
-//     width: 50%;
-//     margin: 0;
-//   }
-// }
-// .features {
-//   width: 100%;
-//   display: block;
-//   padding: $site-border;
-
-//   @include MQ(M) {
-//     // height: calc(50vh - 3rem) !important;
-//     position: absolute;
-//     top: 50%;
-//     right: 0;
-//     width: 50%;
-//     margin: 0;
-//   }
-// }
-
-// .full--centered {
-//   padding: $site-border/2;
-
-//   @include MQ(M) {
-//     position: absolute;
-//     left: 50%;
-//     top: 50%;
-//     bottom: auto;
-//     right: auto;
-//     transform: translateX(-50%) translateY(-50%);
-//     width: 100%;
-//     padding: 0 10%;
-//   }
-// }
-
-// a {
-//   position: relative;
-//   z-index: 999;
-// }
-
 li.disabled:hover {
   cursor: not-allowed;
 
@@ -482,4 +320,9 @@ li.disabled:hover {
       color: $color-1;
     }
   }
+}
+
+
+.vertical--columns .vert-academic a:hover .vertical--title {
+  transform: translateY(0rem)
 }
