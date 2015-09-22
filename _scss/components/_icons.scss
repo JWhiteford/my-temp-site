@@ -26,9 +26,10 @@
   max-width: 5%;
   margin-top: 1rem;
   float: right;
+  max-height: 3px;
 
   img {
-    max-width: 100%;
+    // max-width: 100%;
     background-color: $color-1;
     border-radius: 100%;
     padding: 20%;

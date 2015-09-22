@@ -8,6 +8,7 @@ main {
 
 html * {
   -webkit-overflow-scrolling: touch;
+  -ms-zoom: 1;
 }
 
 ::-moz-selection {

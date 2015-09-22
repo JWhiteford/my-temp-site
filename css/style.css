@@ -17,7 +17,8 @@ main {
   line-height: 1.8rem; }
 
 html * {
-  -webkit-overflow-scrolling: touch; }
+  -webkit-overflow-scrolling: touch;
+  -ms-zoom: 1; }
 
 ::-moz-selection {
   color: #358399;
@@ -76,26 +77,26 @@ body {
   position: absolute;
   z-index: -1; }
 
-.page--half:nth-of-type(1) {
-  background: #358399;
-  color: #fff; }
-
-@media (min-width: 768px) {
-  .page--half {
-    width: 50%;
-    display: block;
-    float: left;
-    height: calc(100vh - 6rem);
-    position: relative;
-    overflow-y: scroll; } }
-
-.page--half.public::after {
-  background: -webkit-linear-gradient(rgba(53, 131, 153, 0.8), rgba(53, 131, 153, 0.8)), url("../img/1.jpg") no-repeat;
-  background: linear-gradient(rgba(53, 131, 153, 0.8), rgba(53, 131, 153, 0.8)), url("../img/1.jpg") no-repeat; }
-
-.page--half.academic::after {
-  background: -webkit-linear-gradient(rgba(0, 151, 134, 0.8), rgba(0, 151, 134, 0.8)), url("../img/2.jpg") no-repeat;
-  background: linear-gradient(rgba(0, 151, 134, 0.8), rgba(0, 151, 134, 0.8)), url("../img/2.jpg") no-repeat; }
+.page--half {
+  overflow: hidden;
+  -ms-overflow-style: none; }
+  .page--half:nth-of-type(1) {
+    background: #358399;
+    color: #fff; }
+  @media (min-width: 768px) {
+    .page--half {
+      width: 50%;
+      display: block;
+      float: left;
+      height: calc(100vh - 6rem);
+      position: relative;
+      overflow-y: scroll; } }
+  .page--half.public::after {
+    background: -webkit-linear-gradient(rgba(53, 131, 153, 0.8), rgba(53, 131, 153, 0.8)), url("../img/1.jpg") no-repeat;
+    background: linear-gradient(rgba(53, 131, 153, 0.8), rgba(53, 131, 153, 0.8)), url("../img/1.jpg") no-repeat; }
+  .page--half.academic::after {
+    background: -webkit-linear-gradient(rgba(0, 151, 134, 0.8), rgba(0, 151, 134, 0.8)), url("../img/2.jpg") no-repeat;
+    background: linear-gradient(rgba(0, 151, 134, 0.8), rgba(0, 151, 134, 0.8)), url("../img/2.jpg") no-repeat; }
 
 .section--content {
   padding: 1.5rem 0; }
@@ -337,7 +338,6 @@ footer {
       background-color: rgba(51, 51, 51, 0.8); }
       .vertical--columns a:hover .vertical--desc {
         opacity: 1;
-        overflow: hidden;
         height: initial;
         -webkit-transition-delay: .3;
                 transition-delay: .3;
@@ -374,7 +374,6 @@ footer {
 
 .vertical--desc {
   display: none;
-  overflow: hidden;
   height: 1px; }
   @media (min-width: 768px) {
     .vertical--desc {
@@ -771,24 +770,26 @@ pre.prettyprint {
     display: block;
     font-size: initial;
     box-sizing: border-box;
-    width: 50%;
     float: left;
     white-space: nowrap; }
+    @media (max-width: 768px) {
+      .tabs-menu li {
+        width: 50%; } }
     .tabs-menu li:last-of-type {
       display: block;
       width: 100%; }
       @media (min-width: 768px) {
         .tabs-menu li:last-of-type {
-          width: initial;
-          display: inline-block; } }
+          display: inline-block;
+          width: initial; } }
     @media (min-width: 768px) {
       .tabs-menu li {
-        width: initial;
         float: none;
         display: inline-block;
-        margin-left: -2px;
-        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);
-        border-radius: 2px; } }
+        margin-left: -2px; } }
+  @media (min-width: 768px) and (min-width: 1170px) {
+    .tabs-menu li {
+      border-radius: 2px; } }
 
 .tab-content {
   width: 100%;
@@ -807,6 +808,9 @@ pre.prettyprint {
   display: block;
   line-height: 2rem; }
   @media (min-width: 768px) {
+    .feature--btn {
+      display: block; } }
+  @media (min-width: 1170px) {
     .feature--btn {
       display: inline-block; } }
   .feature--btn:hover {
@@ -860,9 +864,9 @@ pre.prettyprint {
   border-radius: 50%;
   max-width: 5%;
   margin-top: 1rem;
-  float: right; }
+  float: right;
+  max-height: 3px; }
   .icon-col img {
-    max-width: 100%;
     background-color: #358399;
     border-radius: 100%;
     padding: 20%; }

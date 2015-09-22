@@ -256,7 +256,7 @@ footer {
 
         .vertical--desc {
           opacity: 1;
-          overflow: hidden;
+          // overflow: hidden;
           height: initial;
           transition-delay: .3;
           font-size: .85rem;
@@ -298,7 +298,7 @@ footer {
 
 .vertical--desc {
   display: none;
-  overflow: hidden;
+  // overflow: hidden;
   height: 1px;
 
   @include MQ(M) {
