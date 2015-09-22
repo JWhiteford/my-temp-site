@@ -259,11 +259,16 @@ footer {
           overflow: hidden;
           height: initial;
           transition-delay: .3;
+          font-size: .85rem;
           transform: translateY(3rem);
         }
 
+        .btn--fake {
+          transform: translateY(-1rem);
+        }
+
         .vertical--title {
-          transform: translateY(5rem);
+          transform: translateY(3rem);
         }
 
         &::after {
@@ -274,6 +279,9 @@ footer {
       }
 
       @include MQ(L) {
+        .vertical--desc {
+          font-size: 1rem;
+        }
         .vertical--title {
           transform: translateY(-4rem) scale(1.5);
         }
@@ -302,7 +310,7 @@ footer {
     transform: translateY(20px);
 
     p {
-      margin-bottom: 50px;
+      margin-bottom: 1.5rem;
       color: $white;
     }
   }

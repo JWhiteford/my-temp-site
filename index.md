@@ -39,7 +39,7 @@ sitemap:
       </span>
     </a>
   </li>
-  <li class="vert-hospital disabled">
+  <li class="vert-hospital disabled" title="coming soon">
     <a>
       <span class="block--centered">
         <span class="vertical--title">

@@ -83,6 +83,17 @@
   margin: 1rem 0;
   @include clearfix;
 
+  @include MQ(L) {
+    #portal &,
+    #ils & {
+      padding-right: $body-padding;
+      padding-left: $body-padding;
+    }
+    #portal & {
+      text-align: center;
+    }
+  }
+
   img {
     display: inline-block;
     vertical-align: middle;
