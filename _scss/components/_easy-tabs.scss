@@ -19,6 +19,7 @@
     // white-space: nowrap;
 
     &.current {
+
     }
   }
 }
@@ -48,8 +49,30 @@
   }
 }
 
+.public {
+  .feature--btn:hover {
+    background: lighten($public, 10%);
+  }
+
+.tabs-menu   li.current a {
+    background: $public;
+  }
+}
 .academic {
   .feature--btn:hover {
     background: lighten($academic, 10%);
+  }
+
+  .tabs-menu li.current a {
+    background: $academic;
+  }
+}
+.hospital {
+  .feature--btn:hover {
+    background: lighten($hospital, 10%);
+  }
+
+  .tabs-menu li.current a {
+    background: $hospital;
   }
 }
