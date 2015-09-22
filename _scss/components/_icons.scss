@@ -1,61 +1,22 @@
-// #cms {
-
-//  h3 {
-//   padding-left: 2rem;
-
-//     &.theme::before {
-//       background-image: url(../img/fi-paint-bucket.svg);
-//     }
-//     &.location::before {
-//       background-image: url(../img/fi-marker.svg);
-//     }
-//     &.events::before {
-//       background-image: url(../img/fi-calendar.svg);
-//     }
-//     &.social::before {
-//       background-image: url(../img/fi-share.svg);
-//     }
-//     &.history::before {
-//       background-image: url(../img/fi-clock.svg);
-//     }
-//     &.news::before {
-//       background-image: url(../img/fi-mail.svg);
-//     }
-//     &.book-list::before {
-//       background-image: url(../img/fi-book.svg);
-//     }
-//     &.forms::before {
-//       background-image: url(../img/fi-clipboard-pencil.svg);
-//     }
-//     &.static::before {
-//       background-image: url(../img/fi-page.svg);
-//     }
-//     &.dynamic::before {
-//       background-image: url(../img/fi-page-search.svg);
-//     }
-
-//     &::before {
-//       content: '';
-//       position: absolute;
-//       // filter: hue-rotate(220deg) saturate(5);
-//       height: 1.25rem;
-//       width: 1.25rem;
-//       padding: .25rem;
-//       background-color: $primary-color;
-//       background-repeat: no-repeat;
-//       background-position: center;
-//       background-size: 1rem;
-//       border-radius: 50%;
-//       margin-left: -2.25rem;
-//     }
-//   }
-// }
-
 #cms {
 
+  h1, h2, h3, h4, h5, h6,
+  p {
+    padding-left: initial;
+    padding-right: initial;
+  }
+  p {
+    font-size: .85rem;
+    line-height: 1.125rem;
+    margin-top: 0;
+  }
   h3 {
     // margin-top: 0;
     margin-bottom: 0;
+
+    @include MQ(M) {
+      margin-top: 0;
+    }
   }
 }
 
@@ -75,7 +36,7 @@
   @include MQ(M) {
     margin-right: 2%;
     display: block;
-    width: 8%;
+    width: 5%;
     float: left;
     margin-top: 0;
     max-width: 100%;
@@ -87,8 +48,8 @@
   padding: 0 0 1rem 0;
 
   @include MQ(M) {
-    width: 85%;
-    padding-left: 5%;
+    width: 90%;
+    padding-left: 0;
     float: right;
     border-bottom: none;
     padding-bottom: initial;

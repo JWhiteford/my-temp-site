@@ -33,7 +33,7 @@ sitemap:
           <h1>Academic Libraries</h1>
         </span>
         <span class="vertical--desc">
-          <p>Online library research just got a lot more powerful with this robust EDS Discovery Tool. Add our tailored Responsive Drupal CMS with integrated search to your ILS and your students will thank you!</p>
+          <p>Online library research just got a lot more powerful with this robust EDS Discovery Tool. Add our tailored Responsive Drupal CMS with ILS integration and your patrons will thank you!</p>
           <span class="btn--fake">read more</span>
         </span>
       </span>

@@ -141,6 +141,7 @@ footer {
         background-image: url(#{$bg-public});
       }
     }
+
     &.vert-academic {
       // background-color: $academic;
       &::after {
@@ -148,6 +149,7 @@ footer {
         background-image: url(#{$bg-academic});
       }
     }
+
     &.vert-hospital {
       // background-color: $hospital;
       &::after {
@@ -247,9 +249,6 @@ footer {
 
 // TO-DO fix bottom two verticals on media query medium so the text is nicer aligned on hover
 
-// .vertical--columns .vert-academic a:hover .vertical--title {
-//   transform: translateY(0rem)
-// }
     &:hover {
 
       @include MQ(M) {
@@ -320,9 +319,4 @@ li.disabled:hover {
       color: $color-1;
     }
   }
-}
-
-
-.vertical--columns .vert-academic a:hover .vertical--title {
-  transform: translateY(0rem)
 }

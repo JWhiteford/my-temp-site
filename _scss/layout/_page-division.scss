@@ -105,17 +105,6 @@ body {
       padding-right: $body-padding;
       padding-left: $body-padding;
     }
-
-    &.cms {
-      h1, h2, h3, h4, h5, h6,
-      p {
-        padding-left: initial;
-        padding-right: initial;
-      }
-      p {
-        font-size: .85rem;
-      }
-    }
   }
 
   @include MQ(M) {

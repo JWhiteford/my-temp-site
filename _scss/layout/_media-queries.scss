@@ -8,6 +8,9 @@ $L:     1170px;
   @if $canvas == S {
    @media (min-width: $S) { @content; }
   }
+  @else if $canvas == SO {
+   @media (max-width: $M) { @content; }
+  }
   @else if $canvas == M {
    @media (min-width: $M) { @content; }
   }

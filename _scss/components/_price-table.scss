@@ -8,6 +8,11 @@
   margin-top: $site-border;
   @include clearfix;
 
+  @include MQ(SO) {
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
+
   ul {
     width: 33.3333%;
     float: left;
@@ -19,8 +24,12 @@
     list-style: none;
     border-bottom: dotted 1px $button-color;
     font-size: 0.875rem;
-    padding: 1rem;
+    padding: .1rem;
     text-align: center;
+
+    @include MQ(M) {
+      padding: 1rem;
+    }
 
     &:last-of-type {
       border-bottom: 0;
@@ -29,8 +38,12 @@
     &.price-title {
       white-space: nowrap;
       background: $button-color;
-      padding: 1rem 1.25rem;
+      padding: .75rem .25rem;
       color: $white;
+
+      @include MQ(M) {
+        padding: 1rem 1.25rem;
+      }
     }
   }
 }

@@ -4,7 +4,7 @@ name: Stacks # name is for sharing meta data; it should be the name for the "ove
 description: Site description should be between 130-155 characters
 logo: /img/company-logo.png
 share_logo: /img/share-company-logo.png # Social media posting. FB (Size should be at min 600 x 315. Better size is 1200 x 630) Twitter (min size 280px x 150px)
-baseurl: http://jwhiteford.github.io/my-temp-site/ # the subpath of your site, e.g. /blog/
+baseurl: / # the subpath of your site, e.g. /blog/
 site_author: Stacks
 
 

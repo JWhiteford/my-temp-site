@@ -4,22 +4,43 @@
   padding-left: 0;
   font-size: 0; // remove space between li
   // overflow: initial;
+  @include clearfix;
 
   li {
-    display: inline-block;
+    display: block;
     font-size: initial; // add font size back for spacing
-    margin-left: -2px;
-    box-shadow: 0 1px 3px 0 rgba($black, 0.14);
-    border-radius: 2px;
-    // width: initial;
-    // list-style: none;
-    // padding-left: 0;
-    // float: left;
-    // border: 0;
-    // white-space: nowrap;
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    white-space: nowrap;
 
-    &.current {
+    &:last-of-type {
+      display: block;
+      width: 100%;
 
+      @include MQ(M) {
+        width: initial;
+        display: inline-block;
+      }
+    }
+
+    @include MQ(M) {
+      width: initial;
+      float: none;
+      display: inline-block;
+      margin-left: -2px;
+      box-shadow: 0 1px 3px 0 rgba($black, 0.14);
+      border-radius: 2px;
+      // width: initial;
+      // list-style: none;
+      // padding-left: 0;
+      // float: left;
+      // border: 0;
+      // white-space: nowrap;
+
+      &.current {
+
+      }
     }
   }
 }
@@ -36,13 +57,18 @@
 .feature--btn {
   color: $white;
   padding: .75rem 1.5rem;
-  // text-transform: capitalize;
+  text-transform: capitalize;
   text-decoration: none;
   border: 2px solid transparent;
   background: $button-color;
-  display: inline-block;
+  display: block;
   // margin-bottom: 5px;
   line-height: 2rem;
+
+  @include MQ(M) {
+    display: inline-block;
+  }
+
 
   &:hover {
     background: lighten($public, 10%);

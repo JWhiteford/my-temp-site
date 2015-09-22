@@ -1,13 +1,24 @@
 // Google Fonts
-@import url(http://fonts.googleapis.com/css?family=Varela+Round);
-@import url(http://fonts.googleapis.com/css?family=Merriweather:300,700);
+// @import url(http://fonts.googleapis.com/css?family=Varela+Round);
+// @import url(http://fonts.googleapis.com/css?family=Merriweather:300,700);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,300);
+@import url(https://fonts.googleapis.com/css?family=Gentium+Basic:400,700);
+
 
 // $font-main: "Merriweather", serif;
+$font-heading: 'Gentium Basic', serif;
+// $font-heading: "Varela Round", sans-serif;
 $font-main: 'Open Sans', sans-serif;
-$font-heading: "Varela Round", sans-serif;
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $font-heading;
-  font-weight: 400;
+  font-weight: 300;
+  // color: $oil;
+}
+
+p,
+li {
+  color: #222;
+  letter-spacing: .05em;
+  font-size: 1.125rem;
 }
