@@ -23,23 +23,23 @@
 
 .icon-col {
   border-radius: 50%;
-  max-width: 5%;
+  // max-width: 5%;
   margin-top: 1rem;
   float: right;
-  max-height: 3px;
 
   img {
-    // max-width: 100%;
-    background-color: $color-1;
-    border-radius: 100%;
-    padding: 20%;
+    max-width: 100%;
+    // background-color: $color-1;
+    // border-radius: 100%;
+    // padding: 20%;
+    height: 35px;
   }
 
   @include MQ(M) {
-    margin-right: 2%;
     display: block;
-    width: 5%;
+    width: 8%;
     float: left;
+    margin-right: 2%;
     margin-top: 0;
     max-width: 100%;
   }
